@@ -5,6 +5,8 @@
 //  Created by hwijinjeong on 2023/09/23.
 //
 
+//jira commit 테스트
+
 import UIKit
 
 class ViewController: UIViewController, MTMapViewDelegate {
