@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2E49804E2ABF104200328F83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E49804D2ABF104200328F83 /* AppDelegate.swift */; };
 		2E4980502ABF104200328F83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E49804F2ABF104200328F83 /* SceneDelegate.swift */; };
-		2E4980522ABF104200328F83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4980512ABF104200328F83 /* ViewController.swift */; };
+		2E4980522ABF104200328F83 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4980512ABF104200328F83 /* MapViewController.swift */; };
 		2E4980572ABF104300328F83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E4980562ABF104300328F83 /* Assets.xcassets */; };
 		2E49805A2ABF104300328F83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E4980582ABF104300328F83 /* LaunchScreen.storyboard */; };
 		2E4980892ABF124700328F83 /* map_pinup_custom@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E4980642ABF124700328F83 /* map_pinup_custom@3x.png */; };
@@ -57,7 +57,7 @@
 		2E49804A2ABF104200328F83 /* BinManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BinManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E49804D2ABF104200328F83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E49804F2ABF104200328F83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2E4980512ABF104200328F83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2E4980512ABF104200328F83 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2E4980562ABF104300328F83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E4980592ABF104300328F83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E49805B2ABF104300328F83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 				2E4980622ABF124700328F83 /* DaumMap.embeddedframework */,
 				2E49804D2ABF104200328F83 /* AppDelegate.swift */,
 				2E49804F2ABF104200328F83 /* SceneDelegate.swift */,
-				2E4980512ABF104200328F83 /* ViewController.swift */,
+				2E4980512ABF104200328F83 /* MapViewController.swift */,
 				2E4980562ABF104300328F83 /* Assets.xcassets */,
 				2E4980582ABF104300328F83 /* LaunchScreen.storyboard */,
 				2E49805B2ABF104300328F83 /* Info.plist */,
@@ -352,7 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E4980522ABF104200328F83 /* ViewController.swift in Sources */,
+				2E4980522ABF104200328F83 /* MapViewController.swift in Sources */,
 				2E49804E2ABF104200328F83 /* AppDelegate.swift in Sources */,
 				2E4980502ABF104200328F83 /* SceneDelegate.swift in Sources */,
 			);
@@ -408,7 +408,6 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -469,7 +468,6 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -533,7 +531,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q37X3LG46V;
 				EXCLUDED_ARCHS = "";
-				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BinManagement/DaumMap.embeddedframework",

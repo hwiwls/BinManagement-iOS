@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>위치를 얻으려는 권한입니다.</string>
+	<string>위치 사용을 위한 권한이 필요합니다.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>위치를 얻으려는 권한입니다.</string>
+	<string>위치 사용을 위한 권한이 필요합니다.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>위치 사용 하겠습니다람쥐</string>
 	<key>KAKAO_APP_KEY</key>
@@ -24,8 +24,6 @@
 					<key>UISceneDelegateClassName</key>
 					<string></string>
 					<key>UISceneConfigurationName</key>
-					<string></string>
-					<key>UISceneStoryboardFile</key>
 					<string></string>
 				</dict>
 				<dict>
