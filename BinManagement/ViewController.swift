@@ -5,7 +5,7 @@
 //  Created by hwijinjeong on 2023/09/23.
 //
 
-//jira commit 테스트입니닷
+//jira commit 테스트입니다!!!
 
 import UIKit
 
