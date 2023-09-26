@@ -25,7 +25,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         mapView.baseMapType = .standard
         self.view.addSubview(mapView)
 
-        // 지도의 중심점, 레벨 설정
+        // 지도의 중심점, 레벨 설정합니다.
         mapView.setMapCenter(MTMapPoint(geoCoord: DEFAULT_POSITION), zoomLevel: -0, animated: true)
 
         // 위치 권한 요청
