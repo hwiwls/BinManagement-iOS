@@ -14,8 +14,12 @@ public let DEFAULT_POSITION = MTMapPointGeo(latitude: 37.449339, longitude: 126.
 class MapViewController: UIViewController, MTMapViewDelegate {
 
     var mapView: MTMapView!
+    
     var locationManager: CLLocationManager!
+    
     private let header = MapTabHeader(frame: .zero)
+    
+    private let buildingInfoView = MapBuildingInfoView(height: 230)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -164,13 +168,20 @@ class MapViewController: UIViewController, MTMapViewDelegate {
     
     private func layout() {
         view.addSubviews([
-            header
+            header,
+            buildingInfoView
         ])
         
         header.snp.makeConstraints {
             $0.height.equalTo(50)
             $0.top.equalTo(view.safeAreaLayoutGuide)
             $0.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
+        }
+        
+        buildingInfoView.snp.makeConstraints {
+            $0.height.equalTo(230)
+            $0.leading.trailing.equalToSuperview().inset(25)
+            $0.bottom.equalToSuperview().offset(-100)
         }
     }
     

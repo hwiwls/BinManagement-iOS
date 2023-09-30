@@ -28,7 +28,7 @@ final class MapTabHeader: UIView {
         ])
         
         searchBar.snp.makeConstraints {
-            $0.leading.trailing.bottom.equalToSuperview()
+            $0.leading.trailing.equalToSuperview()
             $0.top.equalToSuperview().offset(5)
         }
     }
