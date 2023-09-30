@@ -15,6 +15,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
 
     var mapView: MTMapView!
     var locationManager: CLLocationManager!
+    private let header = MapTabHeader(frame: .zero)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +26,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         mapView.baseMapType = .standard
         self.view.addSubview(mapView)
 
-        // 지도의 중심점, 레벨 설정
+        // 지도의 중심점, 레벨 설정합니다.
         mapView.setMapCenter(MTMapPoint(geoCoord: DEFAULT_POSITION), zoomLevel: -0, animated: true)
 
         // 위치 권한 요청
@@ -154,7 +155,23 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         mapView.addPOIItems([lawSchool])
         mapView.addPOIItems([centerForContinuingEducation])
         
+        config()
+    }
+    
+    private func config() {
+        layout()
+    }
+    
+    private func layout() {
+        view.addSubviews([
+            header
+        ])
         
+        header.snp.makeConstraints {
+            $0.height.equalTo(50)
+            $0.top.equalTo(view.safeAreaLayoutGuide)
+            $0.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
+        }
     }
     
     func mapView(_ mapView: MTMapView!, updateCurrentLocation location: MTMapPoint!, withAccuracy accuracy: MTMapLocationAccuracy) {
