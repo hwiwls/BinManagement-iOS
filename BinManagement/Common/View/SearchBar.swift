@@ -63,7 +63,7 @@ final class SearchBar: UIView {
         }
         
         searchStart.snp.makeConstraints {
-            $0.top.bottom.equalToSuperview().inset(14)
+            $0.top.equalToSuperview().inset(14)
             $0.height.equalTo(18)
             $0.width.equalTo(19)
             $0.leading.equalToSuperview().inset(12)
