@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreLocation
+import SnapKit
+import Then
 
 public let DEFAULT_POSITION = MTMapPointGeo(latitude: 37.450755, longitude: 126.657110)
 
@@ -19,7 +21,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
     
     private let header = MapTabHeader(frame: .zero)
     
-    private let buildingInfoView = MapBuildingInfoView(height: 230)
+    private lazy var buildingInfoView = MapBuildingInfoView(height: 230)
 
     
     override func viewDidLoad() {
@@ -31,7 +33,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         mapView.baseMapType = .standard
         self.view.addSubview(mapView)
 
-        // 지도의 중심점, 레벨 설정합니다.
+        // 지도의 중심점, 레벨 설정
         mapView.setMapCenter(MTMapPoint(geoCoord: DEFAULT_POSITION), zoomLevel: -0, animated: true)
 
         // 위치 권한 요청
@@ -40,7 +42,8 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         locationManager.requestWhenInUseAuthorization()
         
         let hitechCenter = MTMapPOIItem()
-        hitechCenter.itemName = "인하대학교 하이테크센터"
+        hitechCenter.itemName = "하이테크센터"
+        hitechCenter.tag = 1
         hitechCenter.mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.450755, longitude: 126.657110))
         // 마커를 이미지 파일 이름으로 변경
         hitechCenter.customImageName = "GreenMarker"
@@ -49,6 +52,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         
         let anniversaryHall = MTMapPOIItem()
         anniversaryHall.itemName = "60주년기념관"
+        anniversaryHall.tag = 2
         anniversaryHall.mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.450891, longitude: 126.654289))
         anniversaryHall.customImageName = "GreenMarker"
         anniversaryHall.markerType = .customImage
@@ -56,6 +60,8 @@ class MapViewController: UIViewController, MTMapViewDelegate {
        
         mapView.addPOIItems([hitechCenter])
         mapView.addPOIItems([anniversaryHall])
+        
+        buildingInfoView.isHidden = true
         
         config()
     }
@@ -77,7 +83,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         }
         
         buildingInfoView.snp.makeConstraints {
-            $0.height.equalTo(230)
+            $0.height.equalTo(250)
             $0.leading.trailing.equalToSuperview().inset(25)
             $0.bottom.equalToSuperview().offset(-100)
         }
@@ -92,6 +98,30 @@ class MapViewController: UIViewController, MTMapViewDelegate {
     func mapView(_ mapView: MTMapView, updateDeviceHeading headingAngle: MTMapRotationAngle) {
         print("MTMapView updateDeviceHeading (\(headingAngle)) degrees")
     }
+    
+    func mapView(_ mapView: MTMapView!, selectedPOIItem poiItem: MTMapPOIItem!) -> Bool {
+        // 마커의 tag 값 확인
+        let tag = poiItem.tag
+        
+        switch tag {
+        case 1:
+            print("마커의 tag가 1인 경우 처리")
+            buildingInfoView.buildingLabel.text = "하이테크센터"
+            buildingInfoView.imageView.image = UIImage(named: "HitechCenter")
+            buildingInfoView.isHidden = false
+        case 2:
+            print("마커의 tag가 2인 경우 처리")
+            buildingInfoView.buildingLabel.text = "60주년기념관"
+            buildingInfoView.imageView.image = UIImage(named: "AnniversaryHall")
+            buildingInfoView.isHidden = false
+        default:
+            print("다른 tag 값에 대한 처리")
+        }
+        
+        // 선택 이벤트를 계속 처리할 것인지에 대한 반환 값
+        return true
+    }
+
 }
 
 extension MapViewController: CLLocationManagerDelegate {
@@ -113,4 +143,5 @@ extension MapViewController: CLLocationManagerDelegate {
             print("GPS: Default")
         }
     }
+
 }

@@ -11,21 +11,21 @@ import Then
 
 class MapBuildingInfoView: UIView {
     
-    private let buildingLabel = UILabel().then {
+    let buildingLabel = UILabel().then {
         $0.textColor = .black
         $0.textAlignment = .left
         $0.text = "인하대학교 본관"
         $0.font = UIFont.systemFont(ofSize: 19, weight: .bold)
     }
     
-    private let statusLabel = UILabel().then {
+    let statusLabel = UILabel().then {
         $0.textColor = .red
         $0.textAlignment = .left
         $0.text = "현재 n개의 쓰레기통이 가득 차있습니다"
         $0.font = UIFont.systemFont(ofSize: 14)
     }
     
-    private let imageView = UIImageView().then {
+    let imageView = UIImageView().then {
         $0.image = UIImage(named: "MainBuilding")
     }
 
