@@ -71,6 +71,7 @@ class MapBuildingInfoView: UIView {
             $0.top.equalTo(statusLabel.snp.bottom).offset(12)
             $0.leading.bottom.trailing.equalToSuperview().inset(18)
         }
-        
     }
+    
 }
+
