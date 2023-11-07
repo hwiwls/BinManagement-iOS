@@ -13,6 +13,8 @@ class BuildingDrawingsViewController: UIViewController {
 
     private lazy var header = BuildingDrawingsTabHeader(frame: .zero)
     
+    private lazy var binInfoView = BinInfoView(height: 230)
+    
     private lazy var zoomInBtn = UIButton().then {
         $0.backgroundColor = UIColor.customColor.customSuperLightGray
         $0.setImage(UIImage(systemName: "plus")?.withTintColor(.white, renderingMode: .alwaysOriginal), for: .normal)
@@ -53,6 +55,8 @@ class BuildingDrawingsViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         
+        binInfoView.isHidden = true
+        
         config()
     }
     
@@ -65,7 +69,8 @@ class BuildingDrawingsViewController: UIViewController {
             header,
             scrollView,
             zoomInBtn,
-            zoomOutBtn
+            zoomOutBtn,
+            binInfoView
         ])
         
         scrollView.addSubviews([
@@ -117,7 +122,22 @@ class BuildingDrawingsViewController: UIViewController {
             $0.leading.equalTo(imageView.snp.leading).offset(270)
         }
         
+        binInfoView.snp.makeConstraints {
+            $0.height.equalTo(230)
+            $0.bottom.equalToSuperview()
+            $0.leading.trailing.equalToSuperview()
+        }
+        
         self.scrollView.delegate = self
+        
+        let marker01TapRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleMarker01Tap))
+        marker01.isUserInteractionEnabled = true
+        marker01.addGestureRecognizer(marker01TapRecognizer)
+
+        let marker02TapRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleMarker02Tap))
+        marker02.isUserInteractionEnabled = true
+        marker02.addGestureRecognizer(marker02TapRecognizer)
+        
         
     }
 
@@ -160,23 +180,23 @@ class BuildingDrawingsViewController: UIViewController {
     }
 
     private func updateMarkerPositionForZoomOut() {
-        // 현재 marker01의 프레임을 가져옵니다.
+        // 현재 marker01의 프레임을 가져오기
         let currentMarkerFrame = marker01.frame
 
-        // imageView의 현재 프레임을 가져옵니다.
+        // imageView의 현재 프레임을 가져오기
         let imageViewFrame = imageView.frame
 
-        // marker01의 현재 크기와 위치를 imageView의 기준으로 계산합니다.
+        // marker01의 현재 크기와 위치를 imageView의 기준으로 계산
         let currentMarkerSize = CGSize(width: currentMarkerFrame.size.width, height: currentMarkerFrame.size.height)
         let currentMarkerTopOffset = currentMarkerFrame.minY - imageViewFrame.minY
         let currentMarkerLeadingOffset = currentMarkerFrame.minX - imageViewFrame.minX
 
-        // marker01을 0.625배로 축소합니다.
+        // marker01을 0.625배로 축소
         let newMarkerSize = currentMarkerSize.width * 0.625
         let newMarkerTopOffset = currentMarkerTopOffset * 0.625
         let newMarkerLeadingOffset = currentMarkerLeadingOffset * 0.625
 
-        // marker01의 크기와 위치를 업데이트합니다.
+        // marker01의 크기와 위치를 업데이트
         marker01.snp.updateConstraints {
             $0.width.height.equalTo(newMarkerSize)
             $0.top.equalTo(imageView.snp.top).offset(newMarkerTopOffset)
@@ -185,17 +205,17 @@ class BuildingDrawingsViewController: UIViewController {
         
         let currentMarker02Frame = marker02.frame
 
-        // marker01의 현재 크기와 위치를 imageView의 기준으로 계산합니다.
+        // marker02의 현재 크기와 위치를 imageView의 기준으로 계산
         let currentMarker02Size = CGSize(width: currentMarker02Frame.size.width, height: currentMarker02Frame.size.height)
         let currentMarker02TopOffset = currentMarker02Frame.minY - imageViewFrame.minY
         let currentMarker02LeadingOffset = currentMarker02Frame.minX - imageViewFrame.minX
 
-        // marker01을 0.625배로 축소합니다.
+        // marker02을 0.625배로 축소
         let newMarker02Size = currentMarker02Size.width * 0.625
         let newMarker02TopOffset = currentMarker02TopOffset * 0.625
         let newMarker02LeadingOffset = currentMarker02LeadingOffset * 0.625
         
-        // marker02의 크기와 위치도 업데이트합니다.
+        // marker02의 크기와 위치도 업데이트
         marker02.snp.updateConstraints {
             $0.width.height.equalTo(newMarker02Size)
             $0.top.equalTo(imageView.snp.top).offset(newMarker02TopOffset)
@@ -207,7 +227,6 @@ class BuildingDrawingsViewController: UIViewController {
     @objc private func zoomIn() {
         scrollView.setZoomScale(scrollView.zoomScale * 1.6, animated: true)
         updateMarkerPositionAndSize()
-        
     }
     
     @objc private func zoomOut() {
@@ -216,7 +235,17 @@ class BuildingDrawingsViewController: UIViewController {
             updateMarkerPositionForZoomOut()
         }
     }
-   
+    
+    @objc private func handleMarker01Tap() {
+        binInfoView.binNameLabel.text = "저층부 화장실 앞 쓰레기통"
+        binInfoView.isHidden = false
+    }
+
+    @objc private func handleMarker02Tap() {
+        binInfoView.binNameLabel.text = "고층부 남자화장실 앞 쓰레기통"
+        binInfoView.isHidden = false
+    }
+    
 }
 
 extension BuildingDrawingsViewController: UIScrollViewDelegate {
