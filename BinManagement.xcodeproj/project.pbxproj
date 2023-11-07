@@ -60,6 +60,7 @@
 		2E51EA3F2AC304F100AD0122 /* MapTabHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E51EA3E2AC304F100AD0122 /* MapTabHeader.swift */; };
 		2E748E9E2AF2152F001993D6 /* BuildingDrawingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E748E9D2AF2152F001993D6 /* BuildingDrawingsViewController.swift */; };
 		2E748EA02AF21550001993D6 /* BuildingDrawingsTabHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E748E9F2AF21550001993D6 /* BuildingDrawingsTabHeader.swift */; };
+		2E8891E32AFA55FB007FF8EB /* BinInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8891E22AFA55FB007FF8EB /* BinInfoView.swift */; };
 		2E8AFB1C2AC80416009DF241 /* MapBuildingInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8AFB1B2AC80416009DF241 /* MapBuildingInfoView.swift */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +125,7 @@
 		2E51EA3E2AC304F100AD0122 /* MapTabHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTabHeader.swift; sourceTree = "<group>"; };
 		2E748E9D2AF2152F001993D6 /* BuildingDrawingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingDrawingsViewController.swift; sourceTree = "<group>"; };
 		2E748E9F2AF21550001993D6 /* BuildingDrawingsTabHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingDrawingsTabHeader.swift; sourceTree = "<group>"; };
+		2E8891E22AFA55FB007FF8EB /* BinInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinInfoView.swift; sourceTree = "<group>"; };
 		2E8AFB1B2AC80416009DF241 /* MapBuildingInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBuildingInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -350,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				2E748E9F2AF21550001993D6 /* BuildingDrawingsTabHeader.swift */,
+				2E8891E22AFA55FB007FF8EB /* BinInfoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 				2E3542062AC2F1B60011B3B2 /* UITextField+Attribute.swift in Sources */,
 				2E748E9E2AF2152F001993D6 /* BuildingDrawingsViewController.swift in Sources */,
 				2E51EA3F2AC304F100AD0122 /* MapTabHeader.swift in Sources */,
+				2E8891E32AFA55FB007FF8EB /* BinInfoView.swift in Sources */,
 				2E748EA02AF21550001993D6 /* BuildingDrawingsTabHeader.swift in Sources */,
 				2E3542022AC2EB080011B3B2 /* UIColor+CustomColor.swift in Sources */,
 				2E4980502ABF104200328F83 /* SceneDelegate.swift in Sources */,
