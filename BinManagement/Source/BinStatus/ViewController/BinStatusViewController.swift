@@ -12,24 +12,31 @@ import Then
 class BinStatusViewController: UIViewController {
     private lazy var header = BinStatusTabHeader(frame: .zero)
     
+    let percentageValue: Float = 0.25
+    
     private lazy var binStatusLabel = UILabel().then {
         $0.textColor = .black
         $0.textAlignment = .left
         $0.text = "쓰레기통이 거의 가득 찼습니다.\n얼른 비워주세요!"
         $0.numberOfLines = 2
-        $0.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+        $0.font = UIFont.systemFont(ofSize: 25, weight: .bold)
         $0.setLineSpacing(lineSpacing: 20)
     }
     
     let circularProgressView = BinStatusCircularProgressView(frame: CGRect(x: 50, y: 50, width: 230, height: 230))
     
+    private lazy var percentageLabel = UILabel().then {
+        $0.textColor = UIColor.customColor.customSkyBlue
+        $0.textAlignment = .center
+        $0.font = UIFont.systemFont(ofSize: 40, weight: .bold)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-
+        
         config()
     }
-    
 
     private func config() {
         layout()
@@ -39,7 +46,8 @@ class BinStatusViewController: UIViewController {
         view.addSubviews([
             header,
             binStatusLabel,
-            circularProgressView
+            circularProgressView,
+            percentageLabel
         ])
         
         header.snp.makeConstraints {
@@ -49,7 +57,7 @@ class BinStatusViewController: UIViewController {
         }
         
         binStatusLabel.snp.makeConstraints {
-            $0.top.equalTo(header.snp.bottom).offset(80)
+            $0.top.equalTo(header.snp.bottom).offset(60)
             $0.leading.equalToSuperview().offset(20)
         }
         
@@ -62,12 +70,20 @@ class BinStatusViewController: UIViewController {
         circularProgressView.snp.makeConstraints {
             $0.width.height.equalTo(230)
             $0.centerX.equalToSuperview()
-            $0.centerY.equalToSuperview().offset(80)
+            $0.centerY.equalToSuperview().offset(90)
+        }
+        
+        percentageLabel.snp.makeConstraints {
+            $0.center.equalTo(circularProgressView)
         }
     }
 
     @objc func animateProgress() {
         let cp = self.view.viewWithTag(101) as! BinStatusCircularProgressView
-        cp.setProgressWithAnimation(duration: 1.0, value: 0.75)
+        cp.setProgressWithAnimation(duration: 0.5, value: percentageValue)
+
+        // 프로그레스가 업데이트될 때마다 퍼센트 값을 업데이트
+        let formattedPercentage = String(format: "%.0f%%", percentageValue * 100)
+        percentageLabel.text = formattedPercentage
     }
 }
