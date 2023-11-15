@@ -13,6 +13,8 @@ extension UIColor {
     struct CustomColors {
         let customSuperLightGray = UIColor(named: "CustomSuperLightGray") ?? .white
         let customRegularLightGray = UIColor(named: "CustomRegularLightGray") ?? .white
+        
+        let customSkyBlue = UIColor(named: "CustomSkyBlue") ?? .white
     }
 }
 
