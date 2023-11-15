@@ -85,7 +85,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         buildingInfoView.snp.makeConstraints {
             $0.height.equalTo(250)
             $0.leading.trailing.equalToSuperview().inset(25)
-            $0.bottom.equalToSuperview().offset(-100)
+            $0.bottom.equalToSuperview().offset(-60)
         }
     }
     

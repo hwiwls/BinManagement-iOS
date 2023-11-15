@@ -58,9 +58,14 @@
 		2E4980BC2ABF138000328F83 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2E4980BB2ABF138000328F83 /* Kingfisher */; };
 		2E4980BF2ABF141600328F83 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2E4980BE2ABF141600328F83 /* Alamofire */; };
 		2E51EA3F2AC304F100AD0122 /* MapTabHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E51EA3E2AC304F100AD0122 /* MapTabHeader.swift */; };
+		2E58F2A82AFAA33C00067100 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 2E58F2A72AFAA33C00067100 /* DGCharts */; };
+		2E6868112B038BDF0028FA7F /* BinStatusCircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6868102B038BDF0028FA7F /* BinStatusCircularProgressView.swift */; };
 		2E748E9E2AF2152F001993D6 /* BuildingDrawingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E748E9D2AF2152F001993D6 /* BuildingDrawingsViewController.swift */; };
 		2E748EA02AF21550001993D6 /* BuildingDrawingsTabHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E748E9F2AF21550001993D6 /* BuildingDrawingsTabHeader.swift */; };
 		2E8891E32AFA55FB007FF8EB /* BinInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8891E22AFA55FB007FF8EB /* BinInfoView.swift */; };
+		2E8891E82AFA6B12007FF8EB /* BinStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8891E72AFA6B12007FF8EB /* BinStatusViewController.swift */; };
+		2E8891EA2AFA6BC8007FF8EB /* BinStatusTabHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8891E92AFA6BC8007FF8EB /* BinStatusTabHeader.swift */; };
+		2E8891EC2AFA896A007FF8EB /* UILabel+lineSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8891EB2AFA896A007FF8EB /* UILabel+lineSpacing.swift */; };
 		2E8AFB1C2AC80416009DF241 /* MapBuildingInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8AFB1B2AC80416009DF241 /* MapBuildingInfoView.swift */; };
 /* End PBXBuildFile section */
 
@@ -123,9 +128,13 @@
 		2E4980AF2ABF133B00328F83 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		2E4980B02ABF134200328F83 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		2E51EA3E2AC304F100AD0122 /* MapTabHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTabHeader.swift; sourceTree = "<group>"; };
+		2E6868102B038BDF0028FA7F /* BinStatusCircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinStatusCircularProgressView.swift; sourceTree = "<group>"; };
 		2E748E9D2AF2152F001993D6 /* BuildingDrawingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingDrawingsViewController.swift; sourceTree = "<group>"; };
 		2E748E9F2AF21550001993D6 /* BuildingDrawingsTabHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingDrawingsTabHeader.swift; sourceTree = "<group>"; };
 		2E8891E22AFA55FB007FF8EB /* BinInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinInfoView.swift; sourceTree = "<group>"; };
+		2E8891E72AFA6B12007FF8EB /* BinStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinStatusViewController.swift; sourceTree = "<group>"; };
+		2E8891E92AFA6BC8007FF8EB /* BinStatusTabHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinStatusTabHeader.swift; sourceTree = "<group>"; };
+		2E8891EB2AFA896A007FF8EB /* UILabel+lineSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+lineSpacing.swift"; sourceTree = "<group>"; };
 		2E8AFB1B2AC80416009DF241 /* MapBuildingInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBuildingInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E58F2A82AFAA33C00067100 /* DGCharts in Frameworks */,
 				2E4980B12ABF134500328F83 /* libsqlite3.tbd in Frameworks */,
 				2E4980B22ABF134D00328F83 /* libc++.tbd in Frameworks */,
 				2E4980AD2ABF132C00328F83 /* QuartzCore.framework in Frameworks */,
@@ -172,6 +182,7 @@
 		2E3541FA2AC2E1DB0011B3B2 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				2E8891E42AFA6AE7007FF8EB /* BinStatus */,
 				2E748E9A2AF214D6001993D6 /* BuildingDrawings */,
 				2E8AFB1D2AC82160009DF241 /* Search */,
 				2E3541F72AC2DE240011B3B2 /* Map */,
@@ -220,6 +231,7 @@
 				2E3542052AC2F1B60011B3B2 /* UITextField+Attribute.swift */,
 				2E3542072AC2F1CB0011B3B2 /* UIView+Shadow.swift */,
 				2E3542092AC2F1E20011B3B2 /* UIScreen.swift */,
+				2E8891EB2AFA896A007FF8EB /* UILabel+lineSpacing.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -357,6 +369,32 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		2E8891E42AFA6AE7007FF8EB /* BinStatus */ = {
+			isa = PBXGroup;
+			children = (
+				2E8891E62AFA6B00007FF8EB /* ViewController */,
+				2E8891E52AFA6AFD007FF8EB /* View */,
+			);
+			path = BinStatus;
+			sourceTree = "<group>";
+		};
+		2E8891E52AFA6AFD007FF8EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2E8891E92AFA6BC8007FF8EB /* BinStatusTabHeader.swift */,
+				2E6868102B038BDF0028FA7F /* BinStatusCircularProgressView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2E8891E62AFA6B00007FF8EB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2E8891E72AFA6B12007FF8EB /* BinStatusViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		2E8AFB1D2AC82160009DF241 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -401,6 +439,7 @@
 				2E4980B82ABF137200328F83 /* Then */,
 				2E4980BB2ABF138000328F83 /* Kingfisher */,
 				2E4980BE2ABF141600328F83 /* Alamofire */,
+				2E58F2A72AFAA33C00067100 /* DGCharts */,
 			);
 			productName = BinManagement;
 			productReference = 2E49804A2ABF104200328F83 /* BinManagement.app */;
@@ -435,6 +474,7 @@
 				2E4980B72ABF137200328F83 /* XCRemoteSwiftPackageReference "Then" */,
 				2E4980BA2ABF138000328F83 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				2E4980BD2ABF141600328F83 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				2E58F2A62AFAA33C00067100 /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = 2E49804B2ABF104200328F83 /* Products */;
 			projectDirPath = "";
@@ -489,6 +529,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E8891EC2AFA896A007FF8EB /* UILabel+lineSpacing.swift in Sources */,
+				2E8891EA2AFA6BC8007FF8EB /* BinStatusTabHeader.swift in Sources */,
 				2E3542082AC2F1CB0011B3B2 /* UIView+Shadow.swift in Sources */,
 				2E4980522ABF104200328F83 /* MapViewController.swift in Sources */,
 				2E3542002AC2E7260011B3B2 /* SearchBar.swift in Sources */,
@@ -498,6 +540,8 @@
 				2E3542062AC2F1B60011B3B2 /* UITextField+Attribute.swift in Sources */,
 				2E748E9E2AF2152F001993D6 /* BuildingDrawingsViewController.swift in Sources */,
 				2E51EA3F2AC304F100AD0122 /* MapTabHeader.swift in Sources */,
+				2E6868112B038BDF0028FA7F /* BinStatusCircularProgressView.swift in Sources */,
+				2E8891E82AFA6B12007FF8EB /* BinStatusViewController.swift in Sources */,
 				2E8891E32AFA55FB007FF8EB /* BinInfoView.swift in Sources */,
 				2E748EA02AF21550001993D6 /* BuildingDrawingsTabHeader.swift in Sources */,
 				2E3542022AC2EB080011B3B2 /* UIColor+CustomColor.swift in Sources */,
@@ -760,6 +804,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		2E58F2A62AFAA33C00067100 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -782,6 +834,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2E4980BD2ABF141600328F83 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		2E58F2A72AFAA33C00067100 /* DGCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E58F2A62AFAA33C00067100 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGCharts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

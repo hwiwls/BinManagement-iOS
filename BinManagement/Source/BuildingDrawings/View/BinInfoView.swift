@@ -18,21 +18,17 @@ class BinInfoView: UIView {
         $0.text = "저층부 남자화장실 앞 쓰레기통"
         $0.font = UIFont.systemFont(ofSize: 19, weight: .bold)
     }
-    
+
     private lazy var checkStatusBtn = UIButton().then {
         $0.setTitle("상태 확인하기", for: .normal)
-        $0.setTitleColor(UIColor.black, for: .normal)
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-        $0.setImage(UIImage(systemName: "arrowshape.turn.up.forward")?.withTintColor(UIColor.black, renderingMode: .alwaysOriginal), for: .normal)
-        $0.layer.borderWidth = 1.0
-        $0.layer.borderColor = UIColor.customColor.customSuperLightGray.cgColor
-        $0.imageEdgeInsets = .init(top: 0, left: 0, bottom: 0, right: 20)
     }
-    
+
     init(height: CGFloat = 230, shadow: Bool = true) {
+        
         self.shadow = shadow
         super.init(frame: .zero)
         self.backgroundColor = .white
+        
         layout(height: height)
     }
     
@@ -46,21 +42,38 @@ class BinInfoView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     private func layout(height: CGFloat) {
+        var config = UIButton.Configuration.plain()
+        config.image = UIImage(systemName: "arrowshape.turn.up.forward")?.withTintColor(UIColor.black, renderingMode: .alwaysOriginal)
+        config.imagePadding = 10
+        config.background.strokeColor = UIColor.customColor.customRegularLightGray
+        config.background.strokeWidth = 1
+        config.cornerStyle = .fixed
+        
+        var titleAttr = AttributedString.init("상태 확인하기")
+        titleAttr.foregroundColor = .black
+        titleAttr.font = .systemFont(ofSize: 16.0, weight: .light)
+        config.attributedTitle = titleAttr
+        config.baseForegroundColor = UIColor.black
+        
+        
+        checkStatusBtn.configuration = config
+        
+        
         addSubviews([
             binNameLabel,
             checkStatusBtn
         ])
         
         binNameLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(45)
+            $0.top.equalToSuperview().offset(40)
             $0.leading.equalToSuperview().offset(20)
         }
         
         checkStatusBtn.snp.makeConstraints {
             $0.height.equalTo(50)
-            $0.top.equalTo(binNameLabel.snp.bottom).offset(50)
+            $0.top.equalTo(binNameLabel.snp.bottom).offset(60)
             $0.leading.trailing.equalToSuperview().inset(20)
         }
         
