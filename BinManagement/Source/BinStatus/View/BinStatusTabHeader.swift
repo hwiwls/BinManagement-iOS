@@ -23,7 +23,7 @@ final class BinStatusTabHeader: UIView {
     }
     
     private let borderView = UIView().then {
-        $0.backgroundColor = .lightGray
+        $0.backgroundColor = UIColor.customColor.customSuperLightGray
     }
     
     override init(frame: CGRect) {
