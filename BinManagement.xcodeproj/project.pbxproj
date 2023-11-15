@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E0D858C2B04EB82001E5CAF /* SearchBuildingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0D858B2B04EB82001E5CAF /* SearchBuildingViewController.swift */; };
+		2E0D858E2B04EB91001E5CAF /* SearchBuildingTapHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0D858D2B04EB91001E5CAF /* SearchBuildingTapHeader.swift */; };
+		2E0D85902B04EB9C001E5CAF /* BuildingListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0D858F2B04EB9C001E5CAF /* BuildingListCell.swift */; };
 		2E3542002AC2E7260011B3B2 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3541FF2AC2E7260011B3B2 /* SearchBar.swift */; };
 		2E3542022AC2EB080011B3B2 /* UIColor+CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3542012AC2EB080011B3B2 /* UIColor+CustomColor.swift */; };
 		2E3542042AC2F1890011B3B2 /* UIView+addSubViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3542032AC2F1890011B3B2 /* UIView+addSubViews.swift */; };
@@ -70,6 +73,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E0D858B2B04EB82001E5CAF /* SearchBuildingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBuildingViewController.swift; sourceTree = "<group>"; };
+		2E0D858D2B04EB91001E5CAF /* SearchBuildingTapHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBuildingTapHeader.swift; sourceTree = "<group>"; };
+		2E0D858F2B04EB9C001E5CAF /* BuildingListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingListCell.swift; sourceTree = "<group>"; };
 		2E3541FF2AC2E7260011B3B2 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		2E3542012AC2EB080011B3B2 /* UIColor+CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColor.swift"; sourceTree = "<group>"; };
 		2E3542032AC2F1890011B3B2 /* UIView+addSubViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addSubViews.swift"; sourceTree = "<group>"; };
@@ -162,6 +168,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E0D85882B04EB64001E5CAF /* SearchBuilding */ = {
+			isa = PBXGroup;
+			children = (
+				2E0D858A2B04EB73001E5CAF /* ViewController */,
+				2E0D85892B04EB6F001E5CAF /* View */,
+			);
+			path = SearchBuilding;
+			sourceTree = "<group>";
+		};
+		2E0D85892B04EB6F001E5CAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2E0D858D2B04EB91001E5CAF /* SearchBuildingTapHeader.swift */,
+				2E0D858F2B04EB9C001E5CAF /* BuildingListCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2E0D858A2B04EB73001E5CAF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2E0D858B2B04EB82001E5CAF /* SearchBuildingViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		2E3541F72AC2DE240011B3B2 /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,9 +214,9 @@
 		2E3541FA2AC2E1DB0011B3B2 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				2E0D85882B04EB64001E5CAF /* SearchBuilding */,
 				2E8891E42AFA6AE7007FF8EB /* BinStatus */,
 				2E748E9A2AF214D6001993D6 /* BuildingDrawings */,
-				2E8AFB1D2AC82160009DF241 /* Search */,
 				2E3541F72AC2DE240011B3B2 /* Map */,
 			);
 			path = Source;
@@ -395,29 +427,6 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		2E8AFB1D2AC82160009DF241 /* Search */ = {
-			isa = PBXGroup;
-			children = (
-				2E8AFB1F2AC82176009DF241 /* ViewController */,
-				2E8AFB1E2AC8216B009DF241 /* View */,
-			);
-			path = Search;
-			sourceTree = "<group>";
-		};
-		2E8AFB1E2AC8216B009DF241 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		2E8AFB1F2AC82176009DF241 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -541,11 +550,14 @@
 				2E748E9E2AF2152F001993D6 /* BuildingDrawingsViewController.swift in Sources */,
 				2E51EA3F2AC304F100AD0122 /* MapTabHeader.swift in Sources */,
 				2E6868112B038BDF0028FA7F /* BinStatusCircularProgressView.swift in Sources */,
+				2E0D85902B04EB9C001E5CAF /* BuildingListCell.swift in Sources */,
+				2E0D858C2B04EB82001E5CAF /* SearchBuildingViewController.swift in Sources */,
 				2E8891E82AFA6B12007FF8EB /* BinStatusViewController.swift in Sources */,
 				2E8891E32AFA55FB007FF8EB /* BinInfoView.swift in Sources */,
 				2E748EA02AF21550001993D6 /* BuildingDrawingsTabHeader.swift in Sources */,
 				2E3542022AC2EB080011B3B2 /* UIColor+CustomColor.swift in Sources */,
 				2E4980502ABF104200328F83 /* SceneDelegate.swift in Sources */,
+				2E0D858E2B04EB91001E5CAF /* SearchBuildingTapHeader.swift in Sources */,
 				2E8AFB1C2AC80416009DF241 /* MapBuildingInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
