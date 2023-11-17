@@ -9,12 +9,8 @@ ex) feat/login -> dev
 
 <br>
 
-## Motivation(선택 사항)
-
-<br>
-
 ## 변경 사항
 
 <br>
 
-## 스크린샷
+## 스크린샷(선택사항)
