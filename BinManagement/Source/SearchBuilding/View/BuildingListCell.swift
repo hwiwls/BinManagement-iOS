@@ -72,9 +72,13 @@ final class BuildingListCell: UICollectionViewCell, Identifiable {
             $0.top.equalTo(buildingNameLabel.snp.bottom).offset(5)
             $0.leading.equalTo(buildingNameLabel)
         }
-        
     }
 }
 
-
-
+extension BuildingListCell {
+    func configure(with building: Building) {
+        imageView.image = UIImage(named: building.imageName)
+        buildingNameLabel.text = building.name
+        informationLabel.text = building.information
+    }
+}

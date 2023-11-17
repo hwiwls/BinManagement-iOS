@@ -11,6 +11,8 @@ import Then
 
 final class BinStatusTabHeader: UIView {
     
+    var backBtnAction: (() -> Void)?
+    
     private let backBtn = UIButton().then {
         $0.setImage(UIImage(systemName: "chevron.left")?.withTintColor(UIColor.gray, renderingMode: .alwaysOriginal), for: .normal)
     }
@@ -30,10 +32,20 @@ final class BinStatusTabHeader: UIView {
         super.init(frame: frame)
         self.backgroundColor = .clear
         layout()
+        
+        setupActions()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setupActions() {
+        backBtn.addTarget(self, action: #selector(handleBack), for: .touchUpInside)
+    }
+
+    @objc private func handleBack() {
+        backBtnAction?()
     }
     
     private func layout() {

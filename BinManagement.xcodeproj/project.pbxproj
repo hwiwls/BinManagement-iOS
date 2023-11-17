@@ -16,6 +16,9 @@
 		2E3542062AC2F1B60011B3B2 /* UITextField+Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3542052AC2F1B60011B3B2 /* UITextField+Attribute.swift */; };
 		2E3542082AC2F1CB0011B3B2 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3542072AC2F1CB0011B3B2 /* UIView+Shadow.swift */; };
 		2E35420A2AC2F1E20011B3B2 /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3542092AC2F1E20011B3B2 /* UIScreen.swift */; };
+		2E384C682B07592C007838CF /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E384C672B07592C007838CF /* MainTabBarViewController.swift */; };
+		2E384C6B2B0789EB007838CF /* BuildingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E384C6A2B0789EB007838CF /* BuildingModel.swift */; };
+		2E384C6F2B078FD4007838CF /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E384C6E2B078FD4007838CF /* SignInViewController.swift */; };
 		2E49804E2ABF104200328F83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E49804D2ABF104200328F83 /* AppDelegate.swift */; };
 		2E4980502ABF104200328F83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E49804F2ABF104200328F83 /* SceneDelegate.swift */; };
 		2E4980522ABF104200328F83 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4980512ABF104200328F83 /* MapViewController.swift */; };
@@ -84,6 +87,9 @@
 		2E3542052AC2F1B60011B3B2 /* UITextField+Attribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Attribute.swift"; sourceTree = "<group>"; };
 		2E3542072AC2F1CB0011B3B2 /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		2E3542092AC2F1E20011B3B2 /* UIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreen.swift; sourceTree = "<group>"; };
+		2E384C672B07592C007838CF /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		2E384C6A2B0789EB007838CF /* BuildingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingModel.swift; sourceTree = "<group>"; };
+		2E384C6E2B078FD4007838CF /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		2E49804A2ABF104200328F83 /* BinManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BinManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E49804D2ABF104200328F83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E49804F2ABF104200328F83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -218,6 +224,9 @@
 		2E3541FA2AC2E1DB0011B3B2 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				2E384C6C2B078EAB007838CF /* SignIn */,
+				2E384C692B0789C1007838CF /* Model */,
+				2E384C652B07590F007838CF /* TabBar */,
 				2E57AF8D2B05E73D0045234D /* MyPage */,
 				2E0D85882B04EB64001E5CAF /* SearchBuilding */,
 				2E8891E42AFA6AE7007FF8EB /* BinStatus */,
@@ -258,6 +267,46 @@
 				2E3541FF2AC2E7260011B3B2 /* SearchBar.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		2E384C652B07590F007838CF /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				2E384C662B075919007838CF /* ViewController */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		2E384C662B075919007838CF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2E384C672B07592C007838CF /* MainTabBarViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2E384C692B0789C1007838CF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2E384C6A2B0789EB007838CF /* BuildingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2E384C6C2B078EAB007838CF /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				2E384C6D2B078EB1007838CF /* ViewController */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		2E384C6D2B078EB1007838CF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2E384C6E2B078FD4007838CF /* SignInViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		2E40CED32AC1A41000E4676F /* Extension */ = {
@@ -571,12 +620,14 @@
 				2E8891EC2AFA896A007FF8EB /* UILabel+lineSpacing.swift in Sources */,
 				2E8891EA2AFA6BC8007FF8EB /* BinStatusTabHeader.swift in Sources */,
 				2E3542082AC2F1CB0011B3B2 /* UIView+Shadow.swift in Sources */,
+				2E384C6B2B0789EB007838CF /* BuildingModel.swift in Sources */,
 				2E4980522ABF104200328F83 /* MapViewController.swift in Sources */,
 				2E3542002AC2E7260011B3B2 /* SearchBar.swift in Sources */,
 				2E3542042AC2F1890011B3B2 /* UIView+addSubViews.swift in Sources */,
 				2E35420A2AC2F1E20011B3B2 /* UIScreen.swift in Sources */,
 				2E49804E2ABF104200328F83 /* AppDelegate.swift in Sources */,
 				2E57AF932B05FCB10045234D /* UIButton+ScaleToSize.swift in Sources */,
+				2E384C682B07592C007838CF /* MainTabBarViewController.swift in Sources */,
 				2E3542062AC2F1B60011B3B2 /* UITextField+Attribute.swift in Sources */,
 				2E748E9E2AF2152F001993D6 /* BuildingDrawingsViewController.swift in Sources */,
 				2E51EA3F2AC304F100AD0122 /* MapTabHeader.swift in Sources */,
@@ -584,6 +635,7 @@
 				2E0D85902B04EB9C001E5CAF /* BuildingListCell.swift in Sources */,
 				2E0D858C2B04EB82001E5CAF /* SearchBuildingViewController.swift in Sources */,
 				2E8891E82AFA6B12007FF8EB /* BinStatusViewController.swift in Sources */,
+				2E384C6F2B078FD4007838CF /* SignInViewController.swift in Sources */,
 				2E8891E32AFA55FB007FF8EB /* BinInfoView.swift in Sources */,
 				2E748EA02AF21550001993D6 /* BuildingDrawingsTabHeader.swift in Sources */,
 				2E57AF912B05E7620045234D /* MyPageViewController.swift in Sources */,

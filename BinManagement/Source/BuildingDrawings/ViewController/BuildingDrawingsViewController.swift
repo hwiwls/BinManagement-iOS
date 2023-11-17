@@ -13,7 +13,16 @@ class BuildingDrawingsViewController: UIViewController {
 
     private lazy var header = BuildingDrawingsTabHeader(frame: .zero)
     
-    private lazy var binInfoView = BinInfoView(height: 230)
+    private lazy var binInfoView = BinInfoView(height: 230).then {
+           $0.checkStatusButtonTapped = { [weak self] in
+               self?.handleCheckStatusButtonTapped()
+           }
+       }
+    
+    private func handleCheckStatusButtonTapped() {
+            let binStatusViewController = BinStatusViewController()
+            navigationController?.pushViewController(binStatusViewController, animated: true)
+        }
     
     private lazy var zoomInBtn = UIButton().then {
         $0.backgroundColor = UIColor.customColor.customSuperLightGray
@@ -58,6 +67,15 @@ class BuildingDrawingsViewController: UIViewController {
         binInfoView.isHidden = true
         
         config()
+
+        header.backBtnAction = { [weak self] in
+            self?.handleBack()
+        }
+
+    }
+    
+    private func handleBack() {
+        navigationController?.popViewController(animated: true)
     }
     
     private func config() {
@@ -137,8 +155,6 @@ class BuildingDrawingsViewController: UIViewController {
         let marker02TapRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleMarker02Tap))
         marker02.isUserInteractionEnabled = true
         marker02.addGestureRecognizer(marker02TapRecognizer)
-        
-        
     }
 
     private func updateMarkerPositionAndSize() {
