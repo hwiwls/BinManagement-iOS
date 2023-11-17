@@ -19,9 +19,15 @@ class BinInfoView: UIView {
         $0.font = UIFont.systemFont(ofSize: 19, weight: .bold)
     }
 
+    var checkStatusButtonTapped: (() -> Void)?
     private lazy var checkStatusBtn = UIButton().then {
         $0.setTitle("상태 확인하기", for: .normal)
+        $0.addTarget(self, action: #selector(checkStatusButtonTappedAction), for: .touchUpInside)
     }
+    
+    @objc private func checkStatusButtonTappedAction() {
+            checkStatusButtonTapped?()
+        }
 
     init(height: CGFloat = 230, shadow: Bool = true) {
         
@@ -35,7 +41,7 @@ class BinInfoView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         if shadow {
-            addShadow()
+            addShadow02()
         }
     }
     
@@ -76,9 +82,5 @@ class BinInfoView: UIView {
             $0.top.equalTo(binNameLabel.snp.bottom).offset(60)
             $0.leading.trailing.equalToSuperview().inset(20)
         }
-        
-       
     }
-    
 }
-

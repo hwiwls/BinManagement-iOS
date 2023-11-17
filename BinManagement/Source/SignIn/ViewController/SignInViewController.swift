@@ -8,22 +8,18 @@
 import UIKit
 
 class SignInViewController: UIViewController {
+    
+    private lazy var logInLabel = UILabel().then {
+        $0.textColor = .black
+        $0.font = UIFont.boldSystemFont(ofSize: 50)
+        $0.text = "로그인"
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

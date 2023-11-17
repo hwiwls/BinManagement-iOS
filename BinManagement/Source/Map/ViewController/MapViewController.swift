@@ -45,7 +45,6 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         hitechCenter.itemName = "하이테크센터"
         hitechCenter.tag = 1
         hitechCenter.mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.450755, longitude: 126.657110))
-        // 마커를 이미지 파일 이름으로 변경
         hitechCenter.customImageName = "GreenMarker"
         hitechCenter.markerType = .customImage
         hitechCenter.markerSelectedType = .customImage
@@ -57,13 +56,67 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         anniversaryHall.customImageName = "GreenMarker"
         anniversaryHall.markerType = .customImage
         anniversaryHall.markerSelectedType = .customImage
+        
+        let studentHall = MTMapPOIItem()
+        studentHall.itemName = "학생회관"
+        studentHall.tag = 3
+        studentHall.mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.449503, longitude: 126.656687))
+        studentHall.customImageName = "GreenMarker"
+        studentHall.markerType = .customImage
+        studentHall.markerSelectedType = .customImage
+        
+        let building02 = MTMapPOIItem()
+        building02.itemName = "2호관"
+        building02.tag = 4
+        building02.mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.451121, longitude: 126.655369))
+        building02.customImageName = "GreenMarker"
+        building02.markerType = .customImage
+            building02.markerSelectedType = .customImage
+        
+        let building04 = MTMapPOIItem()
+        building04.itemName = "4호관"
+        building04.tag = 5
+        building04.mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.450438, longitude: 126.655172))
+        building04.customImageName = "GreenMarker"
+        building04.markerType = .customImage
+        building04.markerSelectedType = .customImage
+        
+        let building05 = MTMapPOIItem()
+        building05.itemName = "5호관_동"
+        building05.tag = 5
+        building05.mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.451049, longitude: 126.653796))
+        building05.customImageName = "GreenMarker"
+        building05.markerType = .customImage
+        building05.markerSelectedType = .customImage
+        
+        let mainBuilding = MTMapPOIItem()
+        building04.itemName = "인하대학교 본관"
+        building04.tag = 6
+        building04.mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.449383, longitude: 126.654332))
+        building04.customImageName = "GreenMarker"
+        building04.markerType = .customImage
+        building04.markerSelectedType = .customImage
        
         mapView.addPOIItems([hitechCenter])
         mapView.addPOIItems([anniversaryHall])
+        mapView.addPOIItems([studentHall])
+        mapView.addPOIItems([building02])
+        mapView.addPOIItems([building04])
+        mapView.addPOIItems([building05])
+        mapView.addPOIItems([mainBuilding])
         
         buildingInfoView.isHidden = true
         
         config()
+        
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleMapBuildingInfoTap))
+        buildingInfoView.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc private func handleMapBuildingInfoTap() {
+        let buildingDrawingsVC = BuildingDrawingsViewController()
+        navigationController?.pushViewController(buildingDrawingsVC, animated: true)
     }
     
     private func config() {
@@ -83,9 +136,9 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         }
         
         buildingInfoView.snp.makeConstraints {
-            $0.height.equalTo(250)
+            $0.height.equalTo(260)
             $0.leading.trailing.equalToSuperview().inset(25)
-            $0.bottom.equalToSuperview().offset(-60)
+            $0.bottom.equalToSuperview().offset(-40)
         }
     }
     

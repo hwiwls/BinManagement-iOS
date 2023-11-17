@@ -42,7 +42,7 @@ class SearchBuildingViewController: UIViewController {
     
     private func configCollectionView() {
         collectionView.dataSource = self
-        collectionView.delegate = self
+//        collectionView.delegate = self
     }
     
     private func layout() {
@@ -52,7 +52,7 @@ class SearchBuildingViewController: UIViewController {
         ])
         
         header.snp.makeConstraints {
-            $0.height.equalTo(70)
+            $0.height.equalTo(60)
             $0.top.equalTo(view.safeAreaLayoutGuide)
             $0.leading.trailing.equalToSuperview()
         }
@@ -92,22 +92,18 @@ class SearchBuildingViewController: UIViewController {
 
 extension SearchBuildingViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        10
+        return dummyData.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard
-            let cell = collectionView.dequeueReusableCell(
+        guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: BuildingListCell.identifier,
             for: indexPath
-        ) as? BuildingListCell
-        else { return UICollectionViewCell() }
+        ) as? BuildingListCell else { return UICollectionViewCell() }
+
+        let building = dummyData[indexPath.item]
+        cell.configure(with: building)
 
         return cell
-    }
-}
-
-extension SearchBuildingViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     }
 }

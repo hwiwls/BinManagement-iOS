@@ -12,7 +12,7 @@ import Then
 class BinStatusViewController: UIViewController {
     private lazy var header = BinStatusTabHeader(frame: .zero)
     
-    let percentageValue: Float = 0.25
+    let percentageValue: Float = 0.75
     
     private lazy var binStatusLabel = UILabel().then {
         $0.textColor = .black
@@ -36,6 +36,14 @@ class BinStatusViewController: UIViewController {
         view.backgroundColor = .white
         
         config()
+        
+        header.backBtnAction = { [weak self] in
+            self?.handleBack()
+        }
+    }
+    
+    private func handleBack() {
+        navigationController?.popViewController(animated: true)
     }
 
     private func config() {
