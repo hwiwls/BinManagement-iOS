@@ -111,13 +111,13 @@ extension SearchBuildingViewController: UICollectionViewDataSource {
             let url = URL(string: urlString)
             cell.imageView.kf.setImage(with: url)
         }
-        
-        if let buildingId = arrayCat[indexPath.row].id {
-                cell.buildingNameLabel.text = "Building ID: \(buildingId)"
-            } else {
-                cell.buildingNameLabel.text = "No ID available"
-            }
 
+        if let buildingId = arrayCat[indexPath.row].id {
+                   cell.buildingNameLabel.text = "Building ID: \(buildingId)"
+               } else {
+                   cell.buildingNameLabel.text = "No ID available"
+               }
+        
         return cell
     }
 }

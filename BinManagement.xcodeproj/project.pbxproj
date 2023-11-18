@@ -17,7 +17,6 @@
 		2E3542082AC2F1CB0011B3B2 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3542072AC2F1CB0011B3B2 /* UIView+Shadow.swift */; };
 		2E35420A2AC2F1E20011B3B2 /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3542092AC2F1E20011B3B2 /* UIScreen.swift */; };
 		2E384C682B07592C007838CF /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E384C672B07592C007838CF /* MainTabBarViewController.swift */; };
-		2E384C6B2B0789EB007838CF /* TempBuildingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E384C6A2B0789EB007838CF /* TempBuildingModel.swift */; };
 		2E384C6F2B078FD4007838CF /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E384C6E2B078FD4007838CF /* SignInViewController.swift */; };
 		2E49804E2ABF104200328F83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E49804D2ABF104200328F83 /* AppDelegate.swift */; };
 		2E4980502ABF104200328F83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E49804F2ABF104200328F83 /* SceneDelegate.swift */; };
@@ -92,7 +91,6 @@
 		2E3542072AC2F1CB0011B3B2 /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		2E3542092AC2F1E20011B3B2 /* UIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreen.swift; sourceTree = "<group>"; };
 		2E384C672B07592C007838CF /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
-		2E384C6A2B0789EB007838CF /* TempBuildingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempBuildingModel.swift; sourceTree = "<group>"; };
 		2E384C6E2B078FD4007838CF /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		2E49804A2ABF104200328F83 /* BinManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BinManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E49804D2ABF104200328F83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -232,8 +230,7 @@
 		2E3541FA2AC2E1DB0011B3B2 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				2EF40F6B2B08AF18000E70C9 /* BuildingDataManager */,
-				2E384C692B0789C1007838CF /* Model */,
+				2EF40F762B08FF71000E70C9 /* DataManager */,
 				2E384C6C2B078EAB007838CF /* SignIn */,
 				2E384C652B07590F007838CF /* TabBar */,
 				2E57AF8D2B05E73D0045234D /* MyPage */,
@@ -292,14 +289,6 @@
 				2E384C672B07592C007838CF /* MainTabBarViewController.swift */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		2E384C692B0789C1007838CF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				2E384C6A2B0789EB007838CF /* TempBuildingModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		2E384C6C2B078EAB007838CF /* SignIn */ = {
@@ -526,6 +515,30 @@
 			path = BuildingDataManager;
 			sourceTree = "<group>";
 		};
+		2EF40F742B08FD67000E70C9 /* BinDataManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BinDataManager;
+			sourceTree = "<group>";
+		};
+		2EF40F752B08FD7A000E70C9 /* UserDataManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserDataManager;
+			sourceTree = "<group>";
+		};
+		2EF40F762B08FF71000E70C9 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				2EF40F6B2B08AF18000E70C9 /* BuildingDataManager */,
+				2EF40F742B08FD67000E70C9 /* BinDataManager */,
+				2EF40F752B08FD7A000E70C9 /* UserDataManager */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -641,7 +654,6 @@
 				2E8891EA2AFA6BC8007FF8EB /* BinStatusTabHeader.swift in Sources */,
 				2E3542082AC2F1CB0011B3B2 /* UIView+Shadow.swift in Sources */,
 				2EF40F712B08B180000E70C9 /* BuildingDataManager.swift in Sources */,
-				2E384C6B2B0789EB007838CF /* TempBuildingModel.swift in Sources */,
 				2E4980522ABF104200328F83 /* MapViewController.swift in Sources */,
 				2E3542002AC2E7260011B3B2 /* SearchBar.swift in Sources */,
 				2E3542042AC2F1890011B3B2 /* UIView+addSubViews.swift in Sources */,

@@ -23,7 +23,7 @@ final class BuildingListCell: UICollectionViewCell, Identifiable {
     let buildingNameLabel = UILabel().then {
         $0.textColor = .black
         $0.font = UIFont.systemFont(ofSize: 17)
-        $0.text = "인하대학교 60주년기념관"
+        $0.text = ""
     }
     
 //    private let informationLabel = UILabel().then {
@@ -72,13 +72,5 @@ final class BuildingListCell: UICollectionViewCell, Identifiable {
 //            $0.top.equalTo(buildingNameLabel.snp.bottom).offset(5)
 //            $0.leading.equalTo(buildingNameLabel)
 //        }
-    }
-}
-
-extension BuildingListCell {
-    func configure(with building: Building) {
-        imageView.image = UIImage(named: building.imageName)
-        buildingNameLabel.text = building.name
-        informationLabel.text = building.information
     }
 }

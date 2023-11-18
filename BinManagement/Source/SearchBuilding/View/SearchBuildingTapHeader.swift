@@ -9,7 +9,7 @@ import SnapKit
 import Then
 
 final class SearchBuildingTabHeader: UIView {
-    private let searchBar = SearchBar(height: 40)
+    let searchBar = SearchBar(height: 40)
     
     private let borderView = UIView().then {
         $0.backgroundColor = UIColor.customColor.customSuperLightGray

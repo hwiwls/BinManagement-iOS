@@ -18,6 +18,7 @@ final class SearchBar: UIView {
         $0.textColor = .lightGray
         $0.font = UIFont.systemFont(ofSize: 16)
         $0.addLeftPadding()
+        $0.returnKeyType = .search // 키보드의 리턴 키를 검색으로 변경
     }
     
     let searchStart = UIImageView().then {
