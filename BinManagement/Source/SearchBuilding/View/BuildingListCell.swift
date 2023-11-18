@@ -18,6 +18,7 @@ final class BuildingListCell: UICollectionViewCell, Identifiable {
     
     let imageView = UIImageView().then {
         $0.image = UIImage(named: "")
+        $0.contentMode = .scaleAspectFit
     }
     
     let buildingNameLabel = UILabel().then {

@@ -11,8 +11,7 @@ import Then
 import Kingfisher
 
 class SearchBuildingViewController: UIViewController {
-    // 서버 연동 테스트 위해 임시로 catapi 사용
-    var arrayCat : [BuildingModel] = []
+    var arrayBuilding : [BuildingModel] = []
     
     private lazy var header = SearchBuildingTabHeader(frame: .zero)
     
@@ -38,7 +37,7 @@ class SearchBuildingViewController: UIViewController {
         config()
         configCollectionView()
         
-        let input = BuildingAPIInput(limit: 10, page: 0)
+        let input = BuildingAPIInput(id: nil)
         BuildingDataManager().buildingDataManager(input, self)
     }
     
@@ -95,10 +94,9 @@ class SearchBuildingViewController: UIViewController {
     }
 }
 
-
 extension SearchBuildingViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return arrayCat.count
+        return arrayBuilding.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -107,26 +105,21 @@ extension SearchBuildingViewController: UICollectionViewDataSource {
             for: indexPath
         ) as? BuildingListCell else { return UICollectionViewCell() }
 
-        if let urlString = arrayCat[indexPath.row].url {
-            let url = URL(string: urlString)
-            cell.imageView.kf.setImage(with: url)
+        if let location = arrayBuilding[indexPath.row].location {
+            cell.buildingNameLabel.text = "\(location)"
+        } else {
+            cell.buildingNameLabel.text = "Location Not available"
         }
 
-        if let buildingId = arrayCat[indexPath.row].id {
-                   cell.buildingNameLabel.text = "Building ID: \(buildingId)"
-               } else {
-                   cell.buildingNameLabel.text = "No ID available"
-               }
-        
         return cell
     }
 }
 
 extension SearchBuildingViewController {
-    func successAPI(_ result : [BuildingModel]) {
-        arrayCat = result
-        collectionView.reloadData()
+    func successAPI(_ result: [BuildingModel]) {
+        arrayBuilding = result
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
     }
-    
-    
 }
