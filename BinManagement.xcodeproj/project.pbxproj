@@ -75,6 +75,7 @@
 		2E8891EA2AFA6BC8007FF8EB /* BinStatusTabHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8891E92AFA6BC8007FF8EB /* BinStatusTabHeader.swift */; };
 		2E8891EC2AFA896A007FF8EB /* UILabel+lineSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8891EB2AFA896A007FF8EB /* UILabel+lineSpacing.swift */; };
 		2E8AFB1C2AC80416009DF241 /* MapBuildingInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8AFB1B2AC80416009DF241 /* MapBuildingInfoView.swift */; };
+		2EF40F6A2B089BF6000E70C9 /* MyPageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF40F692B089BF6000E70C9 /* MyPageListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -152,6 +153,7 @@
 		2E8891E92AFA6BC8007FF8EB /* BinStatusTabHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinStatusTabHeader.swift; sourceTree = "<group>"; };
 		2E8891EB2AFA896A007FF8EB /* UILabel+lineSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+lineSpacing.swift"; sourceTree = "<group>"; };
 		2E8AFB1B2AC80416009DF241 /* MapBuildingInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBuildingInfoView.swift; sourceTree = "<group>"; };
+		2EF40F692B089BF6000E70C9 /* MyPageListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -442,6 +444,7 @@
 		2E57AF8E2B05E74F0045234D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2EF40F692B089BF6000E70C9 /* MyPageListCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -631,6 +634,7 @@
 				2E3542062AC2F1B60011B3B2 /* UITextField+Attribute.swift in Sources */,
 				2E748E9E2AF2152F001993D6 /* BuildingDrawingsViewController.swift in Sources */,
 				2E51EA3F2AC304F100AD0122 /* MapTabHeader.swift in Sources */,
+				2EF40F6A2B089BF6000E70C9 /* MyPageListCell.swift in Sources */,
 				2E6868112B038BDF0028FA7F /* BinStatusCircularProgressView.swift in Sources */,
 				2E0D85902B04EB9C001E5CAF /* BuildingListCell.swift in Sources */,
 				2E0D858C2B04EB82001E5CAF /* SearchBuildingViewController.swift in Sources */,
