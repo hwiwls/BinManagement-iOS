@@ -8,8 +8,11 @@
 import UIKit
 import SnapKit
 import Then
+import Kingfisher
 
 class SearchBuildingViewController: UIViewController {
+    // 서버 연동 테스트 위해 임시로 catapi 사용
+    var arrayCat : [BuildingModel] = []
     
     private lazy var header = SearchBuildingTabHeader(frame: .zero)
     
@@ -34,6 +37,9 @@ class SearchBuildingViewController: UIViewController {
         view.backgroundColor = .white
         config()
         configCollectionView()
+        
+        let input = BuildingAPIInput(limit: 10, page: 0)
+        BuildingDataManager().buildingDataManager(input, self)
     }
     
     private func config() {
@@ -92,7 +98,7 @@ class SearchBuildingViewController: UIViewController {
 
 extension SearchBuildingViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dummyData.count
+        return arrayCat.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -101,9 +107,26 @@ extension SearchBuildingViewController: UICollectionViewDataSource {
             for: indexPath
         ) as? BuildingListCell else { return UICollectionViewCell() }
 
-        let building = dummyData[indexPath.item]
-        cell.configure(with: building)
+        if let urlString = arrayCat[indexPath.row].url {
+            let url = URL(string: urlString)
+            cell.imageView.kf.setImage(with: url)
+        }
+        
+        if let buildingId = arrayCat[indexPath.row].id {
+                cell.buildingNameLabel.text = "Building ID: \(buildingId)"
+            } else {
+                cell.buildingNameLabel.text = "No ID available"
+            }
 
         return cell
     }
+}
+
+extension SearchBuildingViewController {
+    func successAPI(_ result : [BuildingModel]) {
+        arrayCat = result
+        collectionView.reloadData()
+    }
+    
+    
 }

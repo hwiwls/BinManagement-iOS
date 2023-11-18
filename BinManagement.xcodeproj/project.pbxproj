@@ -17,7 +17,7 @@
 		2E3542082AC2F1CB0011B3B2 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3542072AC2F1CB0011B3B2 /* UIView+Shadow.swift */; };
 		2E35420A2AC2F1E20011B3B2 /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3542092AC2F1E20011B3B2 /* UIScreen.swift */; };
 		2E384C682B07592C007838CF /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E384C672B07592C007838CF /* MainTabBarViewController.swift */; };
-		2E384C6B2B0789EB007838CF /* BuildingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E384C6A2B0789EB007838CF /* BuildingModel.swift */; };
+		2E384C6B2B0789EB007838CF /* TempBuildingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E384C6A2B0789EB007838CF /* TempBuildingModel.swift */; };
 		2E384C6F2B078FD4007838CF /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E384C6E2B078FD4007838CF /* SignInViewController.swift */; };
 		2E49804E2ABF104200328F83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E49804D2ABF104200328F83 /* AppDelegate.swift */; };
 		2E4980502ABF104200328F83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E49804F2ABF104200328F83 /* SceneDelegate.swift */; };
@@ -76,6 +76,9 @@
 		2E8891EC2AFA896A007FF8EB /* UILabel+lineSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8891EB2AFA896A007FF8EB /* UILabel+lineSpacing.swift */; };
 		2E8AFB1C2AC80416009DF241 /* MapBuildingInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8AFB1B2AC80416009DF241 /* MapBuildingInfoView.swift */; };
 		2EF40F6A2B089BF6000E70C9 /* MyPageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF40F692B089BF6000E70C9 /* MyPageListCell.swift */; };
+		2EF40F6D2B08B0FB000E70C9 /* BuildingAPIInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF40F6C2B08B0FB000E70C9 /* BuildingAPIInput.swift */; };
+		2EF40F712B08B180000E70C9 /* BuildingDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF40F702B08B180000E70C9 /* BuildingDataManager.swift */; };
+		2EF40F732B08DAAD000E70C9 /* BuildingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF40F722B08DAAD000E70C9 /* BuildingModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,7 +92,7 @@
 		2E3542072AC2F1CB0011B3B2 /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		2E3542092AC2F1E20011B3B2 /* UIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreen.swift; sourceTree = "<group>"; };
 		2E384C672B07592C007838CF /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
-		2E384C6A2B0789EB007838CF /* BuildingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingModel.swift; sourceTree = "<group>"; };
+		2E384C6A2B0789EB007838CF /* TempBuildingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempBuildingModel.swift; sourceTree = "<group>"; };
 		2E384C6E2B078FD4007838CF /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		2E49804A2ABF104200328F83 /* BinManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BinManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E49804D2ABF104200328F83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +157,9 @@
 		2E8891EB2AFA896A007FF8EB /* UILabel+lineSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+lineSpacing.swift"; sourceTree = "<group>"; };
 		2E8AFB1B2AC80416009DF241 /* MapBuildingInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBuildingInfoView.swift; sourceTree = "<group>"; };
 		2EF40F692B089BF6000E70C9 /* MyPageListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageListCell.swift; sourceTree = "<group>"; };
+		2EF40F6C2B08B0FB000E70C9 /* BuildingAPIInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingAPIInput.swift; sourceTree = "<group>"; };
+		2EF40F702B08B180000E70C9 /* BuildingDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingDataManager.swift; sourceTree = "<group>"; };
+		2EF40F722B08DAAD000E70C9 /* BuildingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,7 +297,7 @@
 		2E384C692B0789C1007838CF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2E384C6A2B0789EB007838CF /* BuildingModel.swift */,
+				2E384C6A2B0789EB007838CF /* TempBuildingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -513,6 +519,9 @@
 		2EF40F6B2B08AF18000E70C9 /* BuildingDataManager */ = {
 			isa = PBXGroup;
 			children = (
+				2EF40F6C2B08B0FB000E70C9 /* BuildingAPIInput.swift */,
+				2EF40F702B08B180000E70C9 /* BuildingDataManager.swift */,
+				2EF40F722B08DAAD000E70C9 /* BuildingModel.swift */,
 			);
 			path = BuildingDataManager;
 			sourceTree = "<group>";
@@ -631,7 +640,8 @@
 				2E8891EC2AFA896A007FF8EB /* UILabel+lineSpacing.swift in Sources */,
 				2E8891EA2AFA6BC8007FF8EB /* BinStatusTabHeader.swift in Sources */,
 				2E3542082AC2F1CB0011B3B2 /* UIView+Shadow.swift in Sources */,
-				2E384C6B2B0789EB007838CF /* BuildingModel.swift in Sources */,
+				2EF40F712B08B180000E70C9 /* BuildingDataManager.swift in Sources */,
+				2E384C6B2B0789EB007838CF /* TempBuildingModel.swift in Sources */,
 				2E4980522ABF104200328F83 /* MapViewController.swift in Sources */,
 				2E3542002AC2E7260011B3B2 /* SearchBar.swift in Sources */,
 				2E3542042AC2F1890011B3B2 /* UIView+addSubViews.swift in Sources */,
@@ -640,6 +650,7 @@
 				2E57AF932B05FCB10045234D /* UIButton+ScaleToSize.swift in Sources */,
 				2E384C682B07592C007838CF /* MainTabBarViewController.swift in Sources */,
 				2E3542062AC2F1B60011B3B2 /* UITextField+Attribute.swift in Sources */,
+				2EF40F732B08DAAD000E70C9 /* BuildingModel.swift in Sources */,
 				2E748E9E2AF2152F001993D6 /* BuildingDrawingsViewController.swift in Sources */,
 				2E51EA3F2AC304F100AD0122 /* MapTabHeader.swift in Sources */,
 				2EF40F6A2B089BF6000E70C9 /* MyPageListCell.swift in Sources */,
@@ -649,6 +660,7 @@
 				2E8891E82AFA6B12007FF8EB /* BinStatusViewController.swift in Sources */,
 				2E384C6F2B078FD4007838CF /* SignInViewController.swift in Sources */,
 				2E8891E32AFA55FB007FF8EB /* BinInfoView.swift in Sources */,
+				2EF40F6D2B08B0FB000E70C9 /* BuildingAPIInput.swift in Sources */,
 				2E748EA02AF21550001993D6 /* BuildingDrawingsTabHeader.swift in Sources */,
 				2E57AF912B05E7620045234D /* MyPageViewController.swift in Sources */,
 				2E3542022AC2EB080011B3B2 /* UIColor+CustomColor.swift in Sources */,

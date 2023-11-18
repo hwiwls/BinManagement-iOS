@@ -12,25 +12,25 @@ import Then
 final class BuildingListCell: UICollectionViewCell, Identifiable {
     static let identifier = "BuildingListCell"
 
-    private let borderView = UIView().then {
+    private lazy var borderView = UIView().then {
         $0.backgroundColor = UIColor.customColor.customSuperLightGray
     }
     
-    private let imageView = UIImageView().then {
-        $0.image = UIImage(named: "AnniversaryHall")
+    let imageView = UIImageView().then {
+        $0.image = UIImage(named: "")
     }
     
-    private let buildingNameLabel = UILabel().then {
+    let buildingNameLabel = UILabel().then {
         $0.textColor = .black
         $0.font = UIFont.systemFont(ofSize: 17)
         $0.text = "인하대학교 60주년기념관"
     }
     
-    private let informationLabel = UILabel().then {
-        $0.textColor = .systemGreen
-        $0.font = UIFont.systemFont(ofSize: 14)
-        $0.text = "현재 쓰레기통 공간이 여유롭습니다"
-    }
+//    private let informationLabel = UILabel().then {
+//        $0.textColor = .systemGreen
+//        $0.font = UIFont.systemFont(ofSize: 14)
+//        $0.text = "현재 쓰레기통 공간이 여유롭습니다"
+//    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -49,7 +49,7 @@ final class BuildingListCell: UICollectionViewCell, Identifiable {
             borderView,
             imageView,
             buildingNameLabel,
-            informationLabel
+//            informationLabel
         ])
         
         borderView.snp.makeConstraints{
@@ -68,10 +68,10 @@ final class BuildingListCell: UICollectionViewCell, Identifiable {
             $0.leading.equalToSuperview().offset(20)
         }
         
-        informationLabel.snp.makeConstraints {
-            $0.top.equalTo(buildingNameLabel.snp.bottom).offset(5)
-            $0.leading.equalTo(buildingNameLabel)
-        }
+//        informationLabel.snp.makeConstraints {
+//            $0.top.equalTo(buildingNameLabel.snp.bottom).offset(5)
+//            $0.leading.equalTo(buildingNameLabel)
+//        }
     }
 }
 
