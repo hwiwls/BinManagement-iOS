@@ -226,6 +226,7 @@
 		2E3541FA2AC2E1DB0011B3B2 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				2EF40F6B2B08AF18000E70C9 /* BuildingDataManager */,
 				2E384C692B0789C1007838CF /* Model */,
 				2E384C6C2B078EAB007838CF /* SignIn */,
 				2E384C652B07590F007838CF /* TabBar */,
@@ -507,6 +508,13 @@
 				2E8891E72AFA6B12007FF8EB /* BinStatusViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2EF40F6B2B08AF18000E70C9 /* BuildingDataManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BuildingDataManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
