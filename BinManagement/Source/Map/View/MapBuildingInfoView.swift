@@ -18,12 +18,12 @@ class MapBuildingInfoView: UIView {
         $0.font = UIFont.systemFont(ofSize: 19, weight: .bold)
     }
     
-    let statusLabel = UILabel().then {
-        $0.textColor = .red
-        $0.textAlignment = .left
-        $0.text = "현재 n개의 쓰레기통이 가득 차있습니다"
-        $0.font = UIFont.systemFont(ofSize: 14)
-    }
+//    let statusLabel = UILabel().then {
+//        $0.textColor = .red
+//        $0.textAlignment = .left
+//        $0.text = "현재 n개의 쓰레기통이 가득 차있습니다"
+//        $0.font = UIFont.systemFont(ofSize: 14)
+//    }
     
     let imageView = UIImageView().then {
         $0.image = UIImage(named: "MainBuilding")
@@ -54,7 +54,7 @@ class MapBuildingInfoView: UIView {
         
         addSubviews([
             buildingLabel,
-            statusLabel,
+//            statusLabel,
             imageView
         ])
         
@@ -62,13 +62,13 @@ class MapBuildingInfoView: UIView {
             $0.top.leading.equalToSuperview().offset(18)
         }
         
-        statusLabel.snp.makeConstraints {
-            $0.top.equalTo(buildingLabel.snp.bottom).offset(3)
-            $0.leading.equalTo(buildingLabel)
-        }
+//        statusLabel.snp.makeConstraints {
+//            $0.top.equalTo(buildingLabel.snp.bottom).offset(3)
+//            $0.leading.equalTo(buildingLabel)
+//        }
         
         imageView.snp.makeConstraints {
-            $0.top.equalTo(statusLabel.snp.bottom).offset(12)
+            $0.top.equalTo(imageView.snp.bottom).offset(12)
             $0.leading.bottom.trailing.equalToSuperview().inset(18)
         }
     }

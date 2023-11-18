@@ -34,6 +34,7 @@ class MyPageViewController: UIViewController {
         $0.text = "R9QL2E46 님의 담당 구역"
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white

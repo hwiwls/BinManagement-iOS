@@ -73,14 +73,6 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         building02.markerType = .customImage
             building02.markerSelectedType = .customImage
         
-        let building04 = MTMapPOIItem()
-        building04.itemName = "4호관"
-        building04.tag = 5
-        building04.mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.450438, longitude: 126.655172))
-        building04.customImageName = "GreenMarker"
-        building04.markerType = .customImage
-        building04.markerSelectedType = .customImage
-        
         let building05 = MTMapPOIItem()
         building05.itemName = "5호관_동"
         building05.tag = 5
@@ -90,18 +82,17 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         building05.markerSelectedType = .customImage
         
         let mainBuilding = MTMapPOIItem()
-        building04.itemName = "인하대학교 본관"
-        building04.tag = 6
-        building04.mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.449383, longitude: 126.654332))
-        building04.customImageName = "GreenMarker"
-        building04.markerType = .customImage
-        building04.markerSelectedType = .customImage
+        mainBuilding.itemName = "인하대학교 본관"
+        mainBuilding.tag = 6
+        mainBuilding.mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.449383, longitude: 126.654332))
+        mainBuilding.customImageName = "GreenMarker"
+        mainBuilding.markerType = .customImage
+        mainBuilding.markerSelectedType = .customImage
        
         mapView.addPOIItems([hitechCenter])
         mapView.addPOIItems([anniversaryHall])
         mapView.addPOIItems([studentHall])
         mapView.addPOIItems([building02])
-        mapView.addPOIItems([building04])
         mapView.addPOIItems([building05])
         mapView.addPOIItems([mainBuilding])
         
