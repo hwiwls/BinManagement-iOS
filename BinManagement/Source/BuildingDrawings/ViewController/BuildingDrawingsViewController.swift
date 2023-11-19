@@ -10,19 +10,21 @@ import SnapKit
 import Then
 
 class BuildingDrawingsViewController: UIViewController {
+    var currentTrashcanId: Int? // 현재 선택된 trashcan의 id를 저장
 
     private lazy var header = BuildingDrawingsTabHeader(frame: .zero)
     
-    private lazy var binInfoView = BinInfoView(height: 230).then {
-           $0.checkStatusButtonTapped = { [weak self] in
-               self?.handleCheckStatusButtonTapped()
-           }
-       }
+    lazy var binInfoView = BinInfoView(height: 230).then {
+        $0.checkStatusButtonTapped = { [weak self] in
+            self?.handleCheckStatusButtonTapped()
+        }
+    }
     
     private func handleCheckStatusButtonTapped() {
-            let binStatusViewController = BinStatusViewController()
+        let binStatusViewController = BinStatusViewController()
+            binStatusViewController.trashcanId = currentTrashcanId
             navigationController?.pushViewController(binStatusViewController, animated: true)
-        }
+    }
     
     private lazy var zoomInBtn = UIButton().then {
         $0.backgroundColor = UIColor.customColor.customSuperLightGray
@@ -53,11 +55,13 @@ class BuildingDrawingsViewController: UIViewController {
     private lazy var marker01 = UIImageView().then {
         $0.image = UIImage(named: "YellowMarker")
         $0.contentMode = .scaleAspectFit
+        $0.tag = 2
     }
     
     private lazy var marker02 = UIImageView().then {
         $0.image = UIImage(named: "YellowMarker")
         $0.contentMode = .scaleAspectFit
+        $0.tag = 1
     }
     
     override func viewDidLoad() {
@@ -253,13 +257,15 @@ class BuildingDrawingsViewController: UIViewController {
     }
     
     @objc private func handleMarker01Tap() {
-        binInfoView.binNameLabel.text = "저층부 화장실 앞 쓰레기통"
         binInfoView.isHidden = false
+        currentTrashcanId = marker01.tag
+        TrashcanDataManager().getTrashcanDetails(marker01.tag, self)
     }
 
     @objc private func handleMarker02Tap() {
-        binInfoView.binNameLabel.text = "고층부 남자화장실 앞 쓰레기통"
         binInfoView.isHidden = false
+        currentTrashcanId = marker02.tag
+        TrashcanDataManager().getTrashcanDetails(marker02.tag, self)
     }
     
 }
