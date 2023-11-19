@@ -21,7 +21,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
     
     private let header = MapTabHeader(frame: .zero)
     
-    private lazy var buildingInfoView = MapBuildingInfoView(height: 230)
+    private lazy var buildingInfoView = MapBuildingInfoView(height: 280)
 
     
     override func viewDidLoad() {
@@ -127,9 +127,9 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         }
         
         buildingInfoView.snp.makeConstraints {
-            $0.height.equalTo(260)
+            $0.height.equalTo(280)
             $0.leading.trailing.equalToSuperview().inset(25)
-            $0.bottom.equalToSuperview().offset(-40)
+            $0.bottom.equalToSuperview().offset(-30)
         }
     }
     
@@ -144,27 +144,39 @@ class MapViewController: UIViewController, MTMapViewDelegate {
     }
     
     func mapView(_ mapView: MTMapView!, selectedPOIItem poiItem: MTMapPOIItem!) -> Bool {
-        // 마커의 tag 값 확인
         let tag = poiItem.tag
-        
-        switch tag {
-        case 1:
-            print("마커의 tag가 1인 경우 처리")
-            buildingInfoView.buildingLabel.text = "60주년기념관"
-            buildingInfoView.imageView.image = UIImage(named: "AnniversaryHall")
-            buildingInfoView.isHidden = false
-        case 2:
-            print("마커의 tag가 2인 경우 처리")
-            buildingInfoView.buildingLabel.text = "하이테크센터"
-            buildingInfoView.imageView.image = UIImage(named: "HitechCenter")
-            buildingInfoView.isHidden = false
-        default:
-            print("다른 tag 값에 대한 처리")
-        }
-        
-        // 선택 이벤트를 계속 처리할 것인지에 대한 반환 값
+        let dataManager = BuildingDataManager()
+        dataManager.getBuildingDetails(tag, self)
         return true
     }
+  
+    
+    func updateBuildingInfoView(building: BuildingModel) {
+        buildingInfoView.buildingLabel.text = building.name
+        if let urlString = building.img?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+           let url = URL(string: urlString) {
+               DispatchQueue.global().async {
+                   do {
+                       let data = try Data(contentsOf: url)
+                       if let image = UIImage(data: data) {
+                           DispatchQueue.main.async {
+                               self.buildingInfoView.imageView.image = image
+                               self.buildingInfoView.isHidden = false
+                           }
+                       } else {
+                           print("Failed to make image")
+                       }
+                   } catch {
+                       print("Failed to load image data")
+                   }
+               }
+        } else {
+            print("Invalid URL")
+        }
+    }
+
+
+
 
 }
 

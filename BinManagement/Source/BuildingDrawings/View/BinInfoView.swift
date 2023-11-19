@@ -15,7 +15,7 @@ class BinInfoView: UIView {
     lazy var binNameLabel = UILabel().then {
         $0.textColor = .black
         $0.textAlignment = .left
-        $0.text = "저층부 남자화장실 앞 쓰레기통"
+        $0.text = ""
         $0.font = UIFont.systemFont(ofSize: 19, weight: .bold)
     }
 
@@ -26,8 +26,8 @@ class BinInfoView: UIView {
     }
     
     @objc private func checkStatusButtonTappedAction() {
-            checkStatusButtonTapped?()
-        }
+        checkStatusButtonTapped?()
+    }
 
     init(height: CGFloat = 230, shadow: Bool = true) {
         

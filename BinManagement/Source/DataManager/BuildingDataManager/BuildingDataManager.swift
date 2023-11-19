@@ -21,4 +21,21 @@ class BuildingDataManager {
                 }
         }
     }
+    
+    func getBuildingDetails(_ tag: Int, _ viewController: MapViewController) {
+        AF.request("https://befe-218-148-90-111.ngrok-free.app/building?id=\(tag)", method: .get)
+            .validate()
+            .responseDecodable(of: BuildingDataResponse.self) { response in
+                switch response.result {
+                case .success(let result):
+                    guard let building = result.ret.first else { return }
+                    DispatchQueue.main.async {
+                        viewController.updateBuildingInfoView(building: building)
+                    }
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+        }
+    }
+
 }

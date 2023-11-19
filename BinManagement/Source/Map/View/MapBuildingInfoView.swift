@@ -14,7 +14,7 @@ class MapBuildingInfoView: UIView {
     let buildingLabel = UILabel().then {
         $0.textColor = .black
         $0.textAlignment = .left
-        $0.text = "인하대학교 60주년기념관"
+        $0.text = "건물 이름"
         $0.font = UIFont.systemFont(ofSize: 19, weight: .bold)
     }
     
@@ -27,11 +27,12 @@ class MapBuildingInfoView: UIView {
     
     let imageView = UIImageView().then {
         $0.image = UIImage(named: "AnniversaryHall")
+        $0.contentMode = .scaleToFill
     }
 
     private let shadow: Bool
     
-    init(height: CGFloat = 230, shadow: Bool = true) {
+    init(height: CGFloat = 280, shadow: Bool = true) {
         self.shadow = shadow
         super.init(frame: .zero)
         self.backgroundColor = .white
@@ -68,7 +69,7 @@ class MapBuildingInfoView: UIView {
 //        }
         
         imageView.snp.makeConstraints {
-            $0.top.equalTo(imageView.snp.bottom).offset(12)
+            $0.top.equalTo(buildingLabel.snp.bottom).offset(20)
             $0.leading.bottom.trailing.equalToSuperview().inset(18)
         }
     }

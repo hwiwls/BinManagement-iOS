@@ -73,7 +73,10 @@
 		2E8891E82AFA6B12007FF8EB /* BinStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8891E72AFA6B12007FF8EB /* BinStatusViewController.swift */; };
 		2E8891EA2AFA6BC8007FF8EB /* BinStatusTabHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8891E92AFA6BC8007FF8EB /* BinStatusTabHeader.swift */; };
 		2E8891EC2AFA896A007FF8EB /* UILabel+lineSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8891EB2AFA896A007FF8EB /* UILabel+lineSpacing.swift */; };
-		2E8A8DB12B0A038F00808321 /* LineChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8A8DB02B0A038F00808321 /* LineChartViewController.swift */; };
+		2E8A8DB42B0A61DE00808321 /* TrashcanAPIInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8A8DB32B0A61DE00808321 /* TrashcanAPIInput.swift */; };
+		2E8A8DB62B0A620900808321 /* TrashcanDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8A8DB52B0A620900808321 /* TrashcanDataManager.swift */; };
+		2E8A8DB82B0A622D00808321 /* TrashcanDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8A8DB72B0A622D00808321 /* TrashcanDataResponse.swift */; };
+		2E8A8DBA2B0A623E00808321 /* TrashcanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8A8DB92B0A623E00808321 /* TrashcanModel.swift */; };
 		2E8AFB1C2AC80416009DF241 /* MapBuildingInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8AFB1B2AC80416009DF241 /* MapBuildingInfoView.swift */; };
 		2EF40F6D2B08B0FB000E70C9 /* BuildingAPIInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF40F6C2B08B0FB000E70C9 /* BuildingAPIInput.swift */; };
 		2EF40F712B08B180000E70C9 /* BuildingDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF40F702B08B180000E70C9 /* BuildingDataManager.swift */; };
@@ -154,7 +157,10 @@
 		2E8891E72AFA6B12007FF8EB /* BinStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinStatusViewController.swift; sourceTree = "<group>"; };
 		2E8891E92AFA6BC8007FF8EB /* BinStatusTabHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinStatusTabHeader.swift; sourceTree = "<group>"; };
 		2E8891EB2AFA896A007FF8EB /* UILabel+lineSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+lineSpacing.swift"; sourceTree = "<group>"; };
-		2E8A8DB02B0A038F00808321 /* LineChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartViewController.swift; sourceTree = "<group>"; };
+		2E8A8DB32B0A61DE00808321 /* TrashcanAPIInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashcanAPIInput.swift; sourceTree = "<group>"; };
+		2E8A8DB52B0A620900808321 /* TrashcanDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashcanDataManager.swift; sourceTree = "<group>"; };
+		2E8A8DB72B0A622D00808321 /* TrashcanDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashcanDataResponse.swift; sourceTree = "<group>"; };
+		2E8A8DB92B0A623E00808321 /* TrashcanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashcanModel.swift; sourceTree = "<group>"; };
 		2E8AFB1B2AC80416009DF241 /* MapBuildingInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBuildingInfoView.swift; sourceTree = "<group>"; };
 		2EF40F6C2B08B0FB000E70C9 /* BuildingAPIInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingAPIInput.swift; sourceTree = "<group>"; };
 		2EF40F702B08B180000E70C9 /* BuildingDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingDataManager.swift; sourceTree = "<group>"; };
@@ -240,7 +246,6 @@
 				2E8891E42AFA6AE7007FF8EB /* BinStatus */,
 				2E748E9A2AF214D6001993D6 /* BuildingDrawings */,
 				2E3541F72AC2DE240011B3B2 /* Map */,
-				2E8A8DB02B0A038F00808321 /* LineChartViewController.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -499,6 +504,17 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		2E8A8DB22B0A61C500808321 /* TrashcanDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				2E8A8DB32B0A61DE00808321 /* TrashcanAPIInput.swift */,
+				2E8A8DB52B0A620900808321 /* TrashcanDataManager.swift */,
+				2E8A8DB72B0A622D00808321 /* TrashcanDataResponse.swift */,
+				2E8A8DB92B0A623E00808321 /* TrashcanModel.swift */,
+			);
+			path = TrashcanDataManager;
+			sourceTree = "<group>";
+		};
 		2EF40F6B2B08AF18000E70C9 /* BuildingDataManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -527,6 +543,7 @@
 		2EF40F762B08FF71000E70C9 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
+				2E8A8DB22B0A61C500808321 /* TrashcanDataManager */,
 				2EF40F6B2B08AF18000E70C9 /* BuildingDataManager */,
 				2EF40F742B08FD67000E70C9 /* BinDataManager */,
 				2EF40F752B08FD7A000E70C9 /* UserDataManager */,
@@ -651,6 +668,7 @@
 				2E3542082AC2F1CB0011B3B2 /* UIView+Shadow.swift in Sources */,
 				2EF40F712B08B180000E70C9 /* BuildingDataManager.swift in Sources */,
 				2E4980522ABF104200328F83 /* MapViewController.swift in Sources */,
+				2E8A8DB82B0A622D00808321 /* TrashcanDataResponse.swift in Sources */,
 				2E3542002AC2E7260011B3B2 /* SearchBar.swift in Sources */,
 				2E3542042AC2F1890011B3B2 /* UIView+addSubViews.swift in Sources */,
 				2E35420A2AC2F1E20011B3B2 /* UIScreen.swift in Sources */,
@@ -664,15 +682,17 @@
 				2E6868112B038BDF0028FA7F /* BinStatusCircularProgressView.swift in Sources */,
 				2E0D85902B04EB9C001E5CAF /* BuildingListCell.swift in Sources */,
 				2E0D858C2B04EB82001E5CAF /* SearchBuildingViewController.swift in Sources */,
-				2E8A8DB12B0A038F00808321 /* LineChartViewController.swift in Sources */,
+				2E8A8DBA2B0A623E00808321 /* TrashcanModel.swift in Sources */,
 				2E8891E82AFA6B12007FF8EB /* BinStatusViewController.swift in Sources */,
 				2E384C6F2B078FD4007838CF /* SignInViewController.swift in Sources */,
 				2E8891E32AFA55FB007FF8EB /* BinInfoView.swift in Sources */,
 				2EF40F6D2B08B0FB000E70C9 /* BuildingAPIInput.swift in Sources */,
+				2E8A8DB42B0A61DE00808321 /* TrashcanAPIInput.swift in Sources */,
 				2E748EA02AF21550001993D6 /* BuildingDrawingsTabHeader.swift in Sources */,
 				2E57AF912B05E7620045234D /* MyPageViewController.swift in Sources */,
 				2E3542022AC2EB080011B3B2 /* UIColor+CustomColor.swift in Sources */,
 				2E4980502ABF104200328F83 /* SceneDelegate.swift in Sources */,
+				2E8A8DB62B0A620900808321 /* TrashcanDataManager.swift in Sources */,
 				2E0D858E2B04EB91001E5CAF /* SearchBuildingTapHeader.swift in Sources */,
 				2E8AFB1C2AC80416009DF241 /* MapBuildingInfoView.swift in Sources */,
 			);

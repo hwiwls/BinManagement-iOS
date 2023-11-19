@@ -11,14 +11,16 @@ import Then
 import DGCharts
 
 class BinStatusViewController: UIViewController {
+    var trashcanId: Int? // trashcan id를 저장할 속성 추가
+    
     private lazy var header = BinStatusTabHeader(frame: .zero)
     
     let percentageValue: Float = 0.75
     
-    private lazy var binNameLabel = UILabel().then {
+    lazy var binNameLabel = UILabel().then {
         $0.textColor = .black
         $0.textAlignment = .left
-        $0.text = "저층부 남자화장실 앞 쓰레기통"
+        $0.text = ""
         $0.font = UIFont.systemFont(ofSize: 20, weight: .bold)
     }
     
@@ -51,6 +53,11 @@ class BinStatusViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        
+        // trashcanId를 사용해 서버에 요청 보내기
+            if let id = trashcanId {
+                TrashcanDataManager().getTrashcanDetails(id, self)
+            }
         
         config()
         
