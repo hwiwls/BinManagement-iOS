@@ -26,7 +26,7 @@ class MapBuildingInfoView: UIView {
 //    }
     
     let imageView = UIImageView().then {
-        $0.image = UIImage(named: "MainBuilding")
+        $0.image = UIImage(named: "AnniversaryHall")
     }
 
     private let shadow: Bool

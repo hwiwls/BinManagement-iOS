@@ -8,6 +8,7 @@
 import UIKit
 import SnapKit
 import Then
+import Charts
 
 class BinStatusViewController: UIViewController {
     private lazy var header = BinStatusTabHeader(frame: .zero)
