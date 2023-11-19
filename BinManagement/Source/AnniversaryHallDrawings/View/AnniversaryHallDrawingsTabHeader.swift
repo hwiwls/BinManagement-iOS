@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import Then
 
-final class BuildingDrawingsTabHeader: UIView {
+final class AnniversaryHallDrawingsTabHeader: UIView {
     
     private let backBtn = UIButton().then {
         $0.setImage(UIImage(systemName: "chevron.left")?.withTintColor(UIColor.gray, renderingMode: .alwaysOriginal), for: .normal)
