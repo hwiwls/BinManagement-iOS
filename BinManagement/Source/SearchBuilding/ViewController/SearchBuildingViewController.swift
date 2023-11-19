@@ -58,7 +58,7 @@ class SearchBuildingViewController: UIViewController {
         
         header.snp.makeConstraints {
             $0.height.equalTo(60)
-            $0.top.equalTo(view.safeAreaLayoutGuide)
+            $0.top.equalToSuperview()
             $0.leading.trailing.equalToSuperview()
         }
         

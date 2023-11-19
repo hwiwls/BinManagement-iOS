@@ -109,7 +109,7 @@ class MyPageViewController: UIViewController {
         
         imageView.snp.makeConstraints {
             $0.width.height.equalTo(120)
-            $0.top.equalToSuperview().offset(110)
+            $0.top.equalToSuperview().offset(120)
             $0.centerX.equalToSuperview()
         }
         
@@ -136,13 +136,8 @@ class MyPageViewController: UIViewController {
             $0.leading.equalToSuperview().offset(20)
         }
         
-//        buildingImage,
-//        buildingnameLabel,
-//        borderView02,
-//        logoutBtn
-        
         buildingImage.snp.makeConstraints {
-            $0.height.equalTo(210)
+            $0.height.equalTo(250)
             $0.top.equalTo(cleaningAreaLabel.snp.bottom).offset(25)
             $0.leading.trailing.equalToSuperview().inset(20)
         }
@@ -152,17 +147,16 @@ class MyPageViewController: UIViewController {
             $0.leading.equalTo(buildingImage)
         }
         
-        borderView02.snp.makeConstraints {
-            $0.height.equalTo(10)
-            $0.top.equalTo(buildingnameLabel.snp.bottom).offset(25)
-            $0.leading.trailing.equalToSuperview()
-        }
+//        borderView02.snp.makeConstraints {
+//            $0.height.equalTo(10)
+//            $0.top.equalTo(buildingnameLabel.snp.bottom).offset(40)
+//            $0.leading.trailing.equalToSuperview()
+//        }
         
-        logoutBtn.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.top.equalTo(borderView02.snp.bottom).offset(50)
-        }
-        
+//        logoutBtn.snp.makeConstraints {
+//            $0.centerX.equalToSuperview()
+//            $0.top.equalTo(borderView02.snp.bottom).offset(50)
+//        }
     }
 
 }
