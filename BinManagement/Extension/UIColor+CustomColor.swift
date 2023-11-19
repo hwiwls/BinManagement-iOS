@@ -15,6 +15,7 @@ extension UIColor {
         let customRegularLightGray = UIColor(named: "CustomRegularLightGray") ?? .white
         
         let customSkyBlue = UIColor(named: "CustomSkyBlue") ?? .white
+        let customBlue = UIColor(named: "CustomBlue") ?? .white
     }
 }
 

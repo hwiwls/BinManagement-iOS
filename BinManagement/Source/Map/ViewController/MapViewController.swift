@@ -43,7 +43,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         
         let hitechCenter = MTMapPOIItem()
         hitechCenter.itemName = "하이테크센터"
-        hitechCenter.tag = 1
+        hitechCenter.tag = 2
         hitechCenter.mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.450755, longitude: 126.657110))
         hitechCenter.customImageName = "GreenMarker"
         hitechCenter.markerType = .customImage
@@ -51,7 +51,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         
         let anniversaryHall = MTMapPOIItem()
         anniversaryHall.itemName = "60주년기념관"
-        anniversaryHall.tag = 2
+        anniversaryHall.tag = 1
         anniversaryHall.mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.450891, longitude: 126.654289))
         anniversaryHall.customImageName = "GreenMarker"
         anniversaryHall.markerType = .customImage
@@ -150,13 +150,13 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         switch tag {
         case 1:
             print("마커의 tag가 1인 경우 처리")
-            buildingInfoView.buildingLabel.text = "하이테크센터"
-            buildingInfoView.imageView.image = UIImage(named: "HitechCenter")
+            buildingInfoView.buildingLabel.text = "60주년기념관"
+            buildingInfoView.imageView.image = UIImage(named: "AnniversaryHall")
             buildingInfoView.isHidden = false
         case 2:
             print("마커의 tag가 2인 경우 처리")
-            buildingInfoView.buildingLabel.text = "60주년기념관"
-            buildingInfoView.imageView.image = UIImage(named: "AnniversaryHall")
+            buildingInfoView.buildingLabel.text = "하이테크센터"
+            buildingInfoView.imageView.image = UIImage(named: "HitechCenter")
             buildingInfoView.isHidden = false
         default:
             print("다른 tag 값에 대한 처리")

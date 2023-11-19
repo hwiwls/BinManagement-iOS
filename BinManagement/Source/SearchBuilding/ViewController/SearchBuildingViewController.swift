@@ -104,11 +104,24 @@ extension SearchBuildingViewController: UICollectionViewDataSource {
             withReuseIdentifier: BuildingListCell.identifier,
             for: indexPath
         ) as? BuildingListCell else { return UICollectionViewCell() }
+        
+        if let urlString = arrayBuilding[indexPath.row].img,
+           let encodedURLString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+           let url = URL(string: encodedURLString) {
+            cell.imageView.kf.setImage(with: url)
+        }
 
-        if let location = arrayBuilding[indexPath.row].location {
-            cell.buildingNameLabel.text = "\(location)"
+        if let targetBuilding = arrayBuilding.first(where: { $0.id == 2 }), let imageUrl = targetBuilding.img {
+            print("Image URL for id 2: \(imageUrl)")
         } else {
-            cell.buildingNameLabel.text = "Location Not available"
+            print("Data with id 2 not found or image URL is nil")
+        }
+
+        
+        if let name = arrayBuilding[indexPath.row].name {
+            cell.buildingNameLabel.text = "\(name)"
+        } else {
+            cell.buildingNameLabel.text = "Name not available"
         }
 
         return cell
@@ -118,6 +131,10 @@ extension SearchBuildingViewController: UICollectionViewDataSource {
 extension SearchBuildingViewController {
     func successAPI(_ result: [BuildingModel]) {
         arrayBuilding = result
+        
+        ImageCache.default.clearMemoryCache()
+        ImageCache.default.clearDiskCache()
+        
         DispatchQueue.main.async {
             self.collectionView.reloadData()
         }

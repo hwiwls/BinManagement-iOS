@@ -14,7 +14,7 @@ class MapBuildingInfoView: UIView {
     let buildingLabel = UILabel().then {
         $0.textColor = .black
         $0.textAlignment = .left
-        $0.text = "인하대학교 본관"
+        $0.text = "인하대학교 60주년기념관"
         $0.font = UIFont.systemFont(ofSize: 19, weight: .bold)
     }
     
