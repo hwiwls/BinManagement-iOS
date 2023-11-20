@@ -6,11 +6,10 @@
 //
 
 import Alamofire
-
 // client와 server를 연결
 class BuildingDataManager {
     func buildingDataManager(_ parameters: BuildingAPIInput, _ viewController: SearchBuildingViewController) {
-        AF.request("https://befe-218-148-90-111.ngrok-free.app/building", method: .get, parameters: parameters)
+        AF.request("https://b958-218-148-90-111.ngrok-free.app/building", method: .get, parameters: parameters)
             .validate()
             .responseDecodable(of: BuildingDataResponse.self) { response in
                 switch response.result {
@@ -23,7 +22,7 @@ class BuildingDataManager {
     }
     
     func getBuildingDetails(_ tag: Int, _ viewController: MapViewController) {
-        AF.request("https://befe-218-148-90-111.ngrok-free.app/building?id=\(tag)", method: .get)
+        AF.request("https://b958-218-148-90-111.ngrok-free.app//building?id=\(tag)", method: .get)
             .validate()
             .responseDecodable(of: BuildingDataResponse.self) { response in
                 switch response.result {

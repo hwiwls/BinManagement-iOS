@@ -164,10 +164,10 @@ class MapViewController: UIViewController, MTMapViewDelegate {
                                self.buildingInfoView.isHidden = false
                            }
                        } else {
-                           print("Failed to make image")
+                           print("Failed to make image from data: \(data)")
                        }
                    } catch {
-                       print("Failed to load image data")
+                       print("Failed to load image data with error: \(error)")
                    }
                }
         } else {

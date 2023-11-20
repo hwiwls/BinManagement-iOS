@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E0A0B832B0B6FAA00026CF4 /* UserAPIInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A0B822B0B6FAA00026CF4 /* UserAPIInput.swift */; };
+		2E0A0B852B0B6FBA00026CF4 /* UserDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A0B842B0B6FBA00026CF4 /* UserDataResponse.swift */; };
+		2E0A0B872B0B6FC500026CF4 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A0B862B0B6FC500026CF4 /* UserModel.swift */; };
+		2E0A0B892B0B6FD900026CF4 /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0A0B882B0B6FD900026CF4 /* UserDataManager.swift */; };
 		2E0D858C2B04EB82001E5CAF /* SearchBuildingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0D858B2B04EB82001E5CAF /* SearchBuildingViewController.swift */; };
 		2E0D858E2B04EB91001E5CAF /* SearchBuildingTapHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0D858D2B04EB91001E5CAF /* SearchBuildingTapHeader.swift */; };
 		2E0D85902B04EB9C001E5CAF /* BuildingListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0D858F2B04EB9C001E5CAF /* BuildingListCell.swift */; };
@@ -89,6 +93,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E0A0B822B0B6FAA00026CF4 /* UserAPIInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIInput.swift; sourceTree = "<group>"; };
+		2E0A0B842B0B6FBA00026CF4 /* UserDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataResponse.swift; sourceTree = "<group>"; };
+		2E0A0B862B0B6FC500026CF4 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		2E0A0B882B0B6FD900026CF4 /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
 		2E0D858B2B04EB82001E5CAF /* SearchBuildingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBuildingViewController.swift; sourceTree = "<group>"; };
 		2E0D858D2B04EB91001E5CAF /* SearchBuildingTapHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBuildingTapHeader.swift; sourceTree = "<group>"; };
 		2E0D858F2B04EB9C001E5CAF /* BuildingListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingListCell.swift; sourceTree = "<group>"; };
@@ -548,6 +556,10 @@
 		2EF40F752B08FD7A000E70C9 /* UserDataManager */ = {
 			isa = PBXGroup;
 			children = (
+				2E0A0B822B0B6FAA00026CF4 /* UserAPIInput.swift */,
+				2E0A0B842B0B6FBA00026CF4 /* UserDataResponse.swift */,
+				2E0A0B862B0B6FC500026CF4 /* UserModel.swift */,
+				2E0A0B882B0B6FD900026CF4 /* UserDataManager.swift */,
 			);
 			path = UserDataManager;
 			sourceTree = "<group>";
@@ -692,6 +704,7 @@
 				2EF40F732B08DAAD000E70C9 /* BuildingModel.swift in Sources */,
 				2E51EA3F2AC304F100AD0122 /* MapTabHeader.swift in Sources */,
 				2E6868112B038BDF0028FA7F /* BinStatusCircularProgressView.swift in Sources */,
+				2E0A0B872B0B6FC500026CF4 /* UserModel.swift in Sources */,
 				2E0D85902B04EB9C001E5CAF /* BuildingListCell.swift in Sources */,
 				2E0D858C2B04EB82001E5CAF /* SearchBuildingViewController.swift in Sources */,
 				2ECC73622B0A8BEB007F1BB8 /* StateAPIInput.swift in Sources */,
@@ -702,7 +715,10 @@
 				2E8891E32AFA55FB007FF8EB /* BinInfoView.swift in Sources */,
 				2ECC73642B0A8CC6007F1BB8 /* StateDataResponse.swift in Sources */,
 				2EF40F6D2B08B0FB000E70C9 /* BuildingAPIInput.swift in Sources */,
+				2E0A0B892B0B6FD900026CF4 /* UserDataManager.swift in Sources */,
+				2E0A0B832B0B6FAA00026CF4 /* UserAPIInput.swift in Sources */,
 				2ECC73682B0A8D34007F1BB8 /* StateDataManager.swift in Sources */,
+				2E0A0B852B0B6FBA00026CF4 /* UserDataResponse.swift in Sources */,
 				2E8A8DB42B0A61DE00808321 /* TrashcanAPIInput.swift in Sources */,
 				2E748EA02AF21550001993D6 /* AnniversaryHallDrawingsTabHeader.swift in Sources */,
 				2E57AF912B05E7620045234D /* MyPageViewController.swift in Sources */,

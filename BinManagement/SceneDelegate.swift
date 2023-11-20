@@ -22,10 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window?.rootViewController = mainTC
         
-        // SignInViewController를 UINavigationController로 감싸서 rootViewController로 설정
-//        let signInViewController = SignInViewController()
-//        let navigationController = UINavigationController(rootViewController: signInViewController)
-//        window?.rootViewController = navigationController
+
         
         window?.makeKeyAndVisible()
     }

@@ -155,6 +155,5 @@ extension SearchBuildingViewController {
             }
             collectionView.reloadData() // 건물 목록을 새로고침합니다.
         }
-        
-    
+
 }

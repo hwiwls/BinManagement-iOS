@@ -8,5 +8,9 @@
 struct BuildingModel: Decodable {
     var id: Int?
     var name: String?
-    var img: String?
+    var img: String? {
+        didSet {
+            img = img?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        }
+    }
 }
