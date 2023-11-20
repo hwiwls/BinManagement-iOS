@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import SnapKit
+import Then
 
 class SignInViewController: UIViewController {
+    var onConfirm: ((String) -> Void)?
     
     private lazy var logInLabel = UILabel().then {
         $0.textColor = .black
@@ -35,40 +38,19 @@ class SignInViewController: UIViewController {
         $0.backgroundColor = UIColor.customColor.customSkyBlue
         $0.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         $0.setTitleColor(UIColor.white, for: .normal)
-        $0.isEnabled = false
         $0.layer.cornerRadius = 25
         $0.layer.masksToBounds = true
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         view.backgroundColor = .white
         
         config()
         setupActions()
-    }
-    
-    private func setupActions() {
-            confirmBtn.addTarget(self, action: #selector(confirmButtonTapped), for: .touchUpInside)
-        }
-
-    @objc private func confirmButtonTapped() {
-        // MainTabBarViewController 인스턴스 생성
-        let tabBarController = MainTabBarViewController()
         
-        // 현재 뷰 컨트롤러가 embedded 되어 있는 UINavigationController 찾기
-        if let navigationController = self.navigationController {
-            // 탭 바 컨트롤러를 push하여 전환
-            navigationController.pushViewController(tabBarController, animated: true)
-        } else {
-            // 현재 뷰 컨트롤러가 UINavigationController에 embedded 되어 있지 않은 경우,
-            // UINavigationController를 생성하고 탭 바 컨트롤러를 push하여 전환
-            let navigationController = UINavigationController(rootViewController: tabBarController)
-            self.present(navigationController, animated: true, completion: nil)
-        }
     }
-
     
     private func config() {
         layout()
@@ -98,8 +80,23 @@ class SignInViewController: UIViewController {
             $0.leading.trailing.equalToSuperview().inset(20)
         }
     }
-
     
-  
+    private func setupActions() {
+        codeTextField.addTarget(self, action: #selector(codeTextFieldDidChange), for: .editingChanged)
+        confirmBtn.addTarget(self, action: #selector(confirmBtnTapped), for: .touchUpInside)
+    }
     
+    @objc private func codeTextFieldDidChange() {
+        if let code = codeTextField.text, !code.isEmpty {
+            confirmBtn.isEnabled = true
+        } else {
+            confirmBtn.isEnabled = false
+        }
+    }
+    
+    @objc private func confirmBtnTapped() {
+        if let code = codeTextField.text {
+            onConfirm?(code)
+        }
+    }
 }
