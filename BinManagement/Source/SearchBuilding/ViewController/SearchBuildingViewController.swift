@@ -52,7 +52,7 @@ class SearchBuildingViewController: UIViewController {
     
     private func configCollectionView() {
         collectionView.dataSource = self
-//        collectionView.delegate = self
+        collectionView.delegate = self
     }
     
     private func layout() {
@@ -155,5 +155,16 @@ extension SearchBuildingViewController {
             }
             collectionView.reloadData() // 건물 목록을 새로고침합니다.
         }
-
 }
+
+extension SearchBuildingViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedBuilding = arrayBuilding[indexPath.row]
+        let drawingsVC = AnniversaryHallDrawingsViewController()
+        
+        navigationController?.pushViewController(drawingsVC, animated: true)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+}
+
+

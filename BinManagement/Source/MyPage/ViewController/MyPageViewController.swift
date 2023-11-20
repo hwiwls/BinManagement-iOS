@@ -11,15 +11,23 @@ import Then
 
 class MyPageViewController: UIViewController {
     
+    var authenticationCode: String? {
+            didSet {
+                guard let authenticationCode = authenticationCode else { return }
+                cleaningAreaLabel.text = "\(authenticationCode) 님의 담당 구역"
+                nicknameLabel.text = authenticationCode
+            }
+        }
+    
     private lazy var imageView = UIImageView().then {
         $0.image = UIImage(systemName: "face.smiling.inverse")?
             .withTintColor(UIColor.customColor.customSuperLightGray, renderingMode: .alwaysOriginal)
     }
     
-    private lazy var nicknameLabel = UILabel().then {
+    lazy var nicknameLabel = UILabel().then {
         $0.textColor = .black
         $0.font = UIFont.boldSystemFont(ofSize: 24)
-        $0.text = "R9QL2E46"
+        $0.text = "닉네임입니다"
     }
     
     private lazy var editInfoBtn = UIButton()
@@ -28,7 +36,7 @@ class MyPageViewController: UIViewController {
         $0.backgroundColor = UIColor.customColor.customSuperLightGray
     }
 
-    private lazy var cleaningAreaLabel = UILabel().then {
+    lazy var cleaningAreaLabel = UILabel().then {
         $0.textColor = .black
         $0.font = UIFont.boldSystemFont(ofSize: 20)
         $0.text = "R9QL2E46 님의 담당 구역"
