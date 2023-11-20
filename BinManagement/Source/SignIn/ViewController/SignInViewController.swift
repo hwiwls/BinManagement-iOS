@@ -18,7 +18,7 @@ class SignInViewController: UIViewController {
         $0.text = "로그인"
     }
     
-    let codeTextField = UITextField().then {
+    lazy var codeTextField = UITextField().then {
         $0.borderStyle = .roundedRect
         $0.textColor = .black
         $0.returnKeyType = .done
@@ -33,7 +33,7 @@ class SignInViewController: UIViewController {
         $0.layer.masksToBounds = true
     }
     
-    let confirmBtn = UIButton().then {
+    lazy var confirmBtn = UIButton().then {
         $0.setTitle("확인", for: .normal)
         $0.backgroundColor = UIColor.customColor.customSkyBlue
         $0.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
