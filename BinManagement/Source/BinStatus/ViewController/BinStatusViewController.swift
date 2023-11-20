@@ -15,7 +15,7 @@ class BinStatusViewController: UIViewController {
     
     private lazy var header = BinStatusTabHeader(frame: .zero)
     
-    let percentageValue: Float = 0.75
+    var percentageValue: Float = 0.75
     
     lazy var binNameLabel = UILabel().then {
         $0.textColor = .black
@@ -57,6 +57,7 @@ class BinStatusViewController: UIViewController {
         // trashcanId를 사용해 서버에 요청 보내기
             if let id = trashcanId {
                 TrashcanDataManager().getTrashcanDetails(id, self)
+                StateDataManager().getStateDetails(StateAPIInput(trashcan_id: id), self)
             }
         
         config()
@@ -173,7 +174,6 @@ class BinStatusViewController: UIViewController {
         circularProgressView.progressColor = UIColor.customColor.customSkyBlue
         circularProgressView.center = self.view.center
         circularProgressView.tag = 101
-        self.perform(#selector(animateProgress), with: nil, afterDelay: 2.0)
         
         circularProgressView.snp.makeConstraints {
             $0.width.height.equalTo(200)

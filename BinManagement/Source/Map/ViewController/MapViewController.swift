@@ -106,7 +106,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
     }
     
     @objc private func handleMapBuildingInfoTap() {
-        let buildingDrawingsVC = BuildingDrawingsViewController()
+        let buildingDrawingsVC = AnniversaryHallDrawingsViewController()
         navigationController?.pushViewController(buildingDrawingsVC, animated: true)
     }
     

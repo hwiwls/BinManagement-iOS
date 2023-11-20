@@ -67,8 +67,7 @@
 		2E57AF932B05FCB10045234D /* UIButton+ScaleToSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E57AF922B05FCB10045234D /* UIButton+ScaleToSize.swift */; };
 		2E58F2A82AFAA33C00067100 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 2E58F2A72AFAA33C00067100 /* DGCharts */; };
 		2E6868112B038BDF0028FA7F /* BinStatusCircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6868102B038BDF0028FA7F /* BinStatusCircularProgressView.swift */; };
-		2E748E9E2AF2152F001993D6 /* BuildingDrawingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E748E9D2AF2152F001993D6 /* BuildingDrawingsViewController.swift */; };
-		2E748EA02AF21550001993D6 /* BuildingDrawingsTabHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E748E9F2AF21550001993D6 /* BuildingDrawingsTabHeader.swift */; };
+		2E748EA02AF21550001993D6 /* AnniversaryHallDrawingsTabHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E748E9F2AF21550001993D6 /* AnniversaryHallDrawingsTabHeader.swift */; };
 		2E8891E32AFA55FB007FF8EB /* BinInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8891E22AFA55FB007FF8EB /* BinInfoView.swift */; };
 		2E8891E82AFA6B12007FF8EB /* BinStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8891E72AFA6B12007FF8EB /* BinStatusViewController.swift */; };
 		2E8891EA2AFA6BC8007FF8EB /* BinStatusTabHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8891E92AFA6BC8007FF8EB /* BinStatusTabHeader.swift */; };
@@ -77,7 +76,12 @@
 		2E8A8DB62B0A620900808321 /* TrashcanDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8A8DB52B0A620900808321 /* TrashcanDataManager.swift */; };
 		2E8A8DB82B0A622D00808321 /* TrashcanDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8A8DB72B0A622D00808321 /* TrashcanDataResponse.swift */; };
 		2E8A8DBA2B0A623E00808321 /* TrashcanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8A8DB92B0A623E00808321 /* TrashcanModel.swift */; };
+		2E8A8DBC2B0A85BD00808321 /* AnniversaryHallDrawingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8A8DBB2B0A85BD00808321 /* AnniversaryHallDrawingsViewController.swift */; };
 		2E8AFB1C2AC80416009DF241 /* MapBuildingInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8AFB1B2AC80416009DF241 /* MapBuildingInfoView.swift */; };
+		2ECC73622B0A8BEB007F1BB8 /* StateAPIInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECC73612B0A8BEB007F1BB8 /* StateAPIInput.swift */; };
+		2ECC73642B0A8CC6007F1BB8 /* StateDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECC73632B0A8CC6007F1BB8 /* StateDataResponse.swift */; };
+		2ECC73662B0A8CF4007F1BB8 /* StateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECC73652B0A8CF4007F1BB8 /* StateModel.swift */; };
+		2ECC73682B0A8D34007F1BB8 /* StateDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECC73672B0A8D34007F1BB8 /* StateDataManager.swift */; };
 		2EF40F6D2B08B0FB000E70C9 /* BuildingAPIInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF40F6C2B08B0FB000E70C9 /* BuildingAPIInput.swift */; };
 		2EF40F712B08B180000E70C9 /* BuildingDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF40F702B08B180000E70C9 /* BuildingDataManager.swift */; };
 		2EF40F732B08DAAD000E70C9 /* BuildingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF40F722B08DAAD000E70C9 /* BuildingModel.swift */; };
@@ -151,8 +155,7 @@
 		2E57AF902B05E7620045234D /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		2E57AF922B05FCB10045234D /* UIButton+ScaleToSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+ScaleToSize.swift"; sourceTree = "<group>"; };
 		2E6868102B038BDF0028FA7F /* BinStatusCircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinStatusCircularProgressView.swift; sourceTree = "<group>"; };
-		2E748E9D2AF2152F001993D6 /* BuildingDrawingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingDrawingsViewController.swift; sourceTree = "<group>"; };
-		2E748E9F2AF21550001993D6 /* BuildingDrawingsTabHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingDrawingsTabHeader.swift; sourceTree = "<group>"; };
+		2E748E9F2AF21550001993D6 /* AnniversaryHallDrawingsTabHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnniversaryHallDrawingsTabHeader.swift; sourceTree = "<group>"; };
 		2E8891E22AFA55FB007FF8EB /* BinInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinInfoView.swift; sourceTree = "<group>"; };
 		2E8891E72AFA6B12007FF8EB /* BinStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinStatusViewController.swift; sourceTree = "<group>"; };
 		2E8891E92AFA6BC8007FF8EB /* BinStatusTabHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinStatusTabHeader.swift; sourceTree = "<group>"; };
@@ -161,7 +164,12 @@
 		2E8A8DB52B0A620900808321 /* TrashcanDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashcanDataManager.swift; sourceTree = "<group>"; };
 		2E8A8DB72B0A622D00808321 /* TrashcanDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashcanDataResponse.swift; sourceTree = "<group>"; };
 		2E8A8DB92B0A623E00808321 /* TrashcanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashcanModel.swift; sourceTree = "<group>"; };
+		2E8A8DBB2B0A85BD00808321 /* AnniversaryHallDrawingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnniversaryHallDrawingsViewController.swift; sourceTree = "<group>"; };
 		2E8AFB1B2AC80416009DF241 /* MapBuildingInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBuildingInfoView.swift; sourceTree = "<group>"; };
+		2ECC73612B0A8BEB007F1BB8 /* StateAPIInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateAPIInput.swift; sourceTree = "<group>"; };
+		2ECC73632B0A8CC6007F1BB8 /* StateDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDataResponse.swift; sourceTree = "<group>"; };
+		2ECC73652B0A8CF4007F1BB8 /* StateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateModel.swift; sourceTree = "<group>"; };
+		2ECC73672B0A8D34007F1BB8 /* StateDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDataManager.swift; sourceTree = "<group>"; };
 		2EF40F6C2B08B0FB000E70C9 /* BuildingAPIInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingAPIInput.swift; sourceTree = "<group>"; };
 		2EF40F702B08B180000E70C9 /* BuildingDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingDataManager.swift; sourceTree = "<group>"; };
 		2EF40F722B08DAAD000E70C9 /* BuildingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingModel.swift; sourceTree = "<group>"; };
@@ -244,7 +252,7 @@
 				2E57AF8D2B05E73D0045234D /* MyPage */,
 				2E0D85882B04EB64001E5CAF /* SearchBuilding */,
 				2E8891E42AFA6AE7007FF8EB /* BinStatus */,
-				2E748E9A2AF214D6001993D6 /* BuildingDrawings */,
+				2E748E9A2AF214D6001993D6 /* AnniversaryHallDrawings */,
 				2E3541F72AC2DE240011B3B2 /* Map */,
 			);
 			path = Source;
@@ -452,19 +460,19 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		2E748E9A2AF214D6001993D6 /* BuildingDrawings */ = {
+		2E748E9A2AF214D6001993D6 /* AnniversaryHallDrawings */ = {
 			isa = PBXGroup;
 			children = (
 				2E748E9B2AF21501001993D6 /* ViewController */,
 				2E748E9C2AF21507001993D6 /* View */,
 			);
-			path = BuildingDrawings;
+			path = AnniversaryHallDrawings;
 			sourceTree = "<group>";
 		};
 		2E748E9B2AF21501001993D6 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				2E748E9D2AF2152F001993D6 /* BuildingDrawingsViewController.swift */,
+				2E8A8DBB2B0A85BD00808321 /* AnniversaryHallDrawingsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -472,7 +480,7 @@
 		2E748E9C2AF21507001993D6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2E748E9F2AF21550001993D6 /* BuildingDrawingsTabHeader.swift */,
+				2E748E9F2AF21550001993D6 /* AnniversaryHallDrawingsTabHeader.swift */,
 				2E8891E22AFA55FB007FF8EB /* BinInfoView.swift */,
 			);
 			path = View;
@@ -526,11 +534,15 @@
 			path = BuildingDataManager;
 			sourceTree = "<group>";
 		};
-		2EF40F742B08FD67000E70C9 /* BinDataManager */ = {
+		2EF40F742B08FD67000E70C9 /* StateDataManager */ = {
 			isa = PBXGroup;
 			children = (
+				2ECC73612B0A8BEB007F1BB8 /* StateAPIInput.swift */,
+				2ECC73632B0A8CC6007F1BB8 /* StateDataResponse.swift */,
+				2ECC73652B0A8CF4007F1BB8 /* StateModel.swift */,
+				2ECC73672B0A8D34007F1BB8 /* StateDataManager.swift */,
 			);
-			path = BinDataManager;
+			path = StateDataManager;
 			sourceTree = "<group>";
 		};
 		2EF40F752B08FD7A000E70C9 /* UserDataManager */ = {
@@ -545,7 +557,7 @@
 			children = (
 				2E8A8DB22B0A61C500808321 /* TrashcanDataManager */,
 				2EF40F6B2B08AF18000E70C9 /* BuildingDataManager */,
-				2EF40F742B08FD67000E70C9 /* BinDataManager */,
+				2EF40F742B08FD67000E70C9 /* StateDataManager */,
 				2EF40F752B08FD7A000E70C9 /* UserDataManager */,
 			);
 			path = DataManager;
@@ -675,20 +687,24 @@
 				2E49804E2ABF104200328F83 /* AppDelegate.swift in Sources */,
 				2E57AF932B05FCB10045234D /* UIButton+ScaleToSize.swift in Sources */,
 				2E384C682B07592C007838CF /* MainTabBarViewController.swift in Sources */,
+				2ECC73662B0A8CF4007F1BB8 /* StateModel.swift in Sources */,
 				2E3542062AC2F1B60011B3B2 /* UITextField+Attribute.swift in Sources */,
 				2EF40F732B08DAAD000E70C9 /* BuildingModel.swift in Sources */,
-				2E748E9E2AF2152F001993D6 /* BuildingDrawingsViewController.swift in Sources */,
 				2E51EA3F2AC304F100AD0122 /* MapTabHeader.swift in Sources */,
 				2E6868112B038BDF0028FA7F /* BinStatusCircularProgressView.swift in Sources */,
 				2E0D85902B04EB9C001E5CAF /* BuildingListCell.swift in Sources */,
 				2E0D858C2B04EB82001E5CAF /* SearchBuildingViewController.swift in Sources */,
+				2ECC73622B0A8BEB007F1BB8 /* StateAPIInput.swift in Sources */,
 				2E8A8DBA2B0A623E00808321 /* TrashcanModel.swift in Sources */,
+				2E8A8DBC2B0A85BD00808321 /* AnniversaryHallDrawingsViewController.swift in Sources */,
 				2E8891E82AFA6B12007FF8EB /* BinStatusViewController.swift in Sources */,
 				2E384C6F2B078FD4007838CF /* SignInViewController.swift in Sources */,
 				2E8891E32AFA55FB007FF8EB /* BinInfoView.swift in Sources */,
+				2ECC73642B0A8CC6007F1BB8 /* StateDataResponse.swift in Sources */,
 				2EF40F6D2B08B0FB000E70C9 /* BuildingAPIInput.swift in Sources */,
+				2ECC73682B0A8D34007F1BB8 /* StateDataManager.swift in Sources */,
 				2E8A8DB42B0A61DE00808321 /* TrashcanAPIInput.swift in Sources */,
-				2E748EA02AF21550001993D6 /* BuildingDrawingsTabHeader.swift in Sources */,
+				2E748EA02AF21550001993D6 /* AnniversaryHallDrawingsTabHeader.swift in Sources */,
 				2E57AF912B05E7620045234D /* MyPageViewController.swift in Sources */,
 				2E3542022AC2EB080011B3B2 /* UIColor+CustomColor.swift in Sources */,
 				2E4980502ABF104200328F83 /* SceneDelegate.swift in Sources */,

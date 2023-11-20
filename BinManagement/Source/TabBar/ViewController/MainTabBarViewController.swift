@@ -94,7 +94,7 @@ final class MainTabBarViewController: UITabBarController {
     }
 
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        if viewController is BinStatusViewController || viewController is BuildingDrawingsViewController {
+        if viewController is BinStatusViewController || viewController is AnniversaryHallDrawingsViewController {
             print("Selected BinStatusViewController or BuildingDrawingsViewController")
             tabBar.isHidden = true
         } else {

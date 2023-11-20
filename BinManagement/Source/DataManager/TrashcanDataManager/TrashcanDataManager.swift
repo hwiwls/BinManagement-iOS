@@ -33,7 +33,7 @@ class TrashcanDataManager {
                 case .success(let result):
                     guard let trashcan = result.ret.first else { return }
                     DispatchQueue.main.async {
-                        if let vc = viewController as? BuildingDrawingsViewController {
+                        if let vc = viewController as? AnniversaryHallDrawingsViewController {
                             vc.binInfoView.binNameLabel.text = trashcan.location
                         } else if let vc = viewController as? BinStatusViewController {
                             vc.binNameLabel.text = trashcan.location
