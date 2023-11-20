@@ -9,7 +9,9 @@ import UIKit
 import SnapKit
 import Then
 
-final class SearchBar: UIView {
+final class SearchBar: UIView, UITextFieldDelegate {
+    var onSearchButtonClicked: ((String) -> Void)?
+    
     let textField = UITextField().then {
         $0.placeHolder(
             string: "건물 검색",
@@ -32,7 +34,17 @@ final class SearchBar: UIView {
         self.shadow = shadow
         super.init(frame: .zero)
         layout(height: height)
+        
+        textField.delegate = self
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            textField.resignFirstResponder() // 키보드를 내립니다.
+            if let text = textField.text {
+                onSearchButtonClicked?(text) // 검색어를 이용해 건물을 필터링합니다.
+            }
+            return true
+        }
     
     override func layoutSubviews() {
         super.layoutSubviews()

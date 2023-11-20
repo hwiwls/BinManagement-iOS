@@ -12,6 +12,7 @@ import Kingfisher
 
 class SearchBuildingViewController: UIViewController {
     var arrayBuilding : [BuildingModel] = []
+    var allBuildings: [BuildingModel] = [] // 모든 건물을 저장하는 배열입니다.
     
     private lazy var header = SearchBuildingTabHeader(frame: .zero)
     
@@ -39,6 +40,10 @@ class SearchBuildingViewController: UIViewController {
         
         let input = BuildingAPIInput(id: nil)
         BuildingDataManager().buildingDataManager(input, self)
+        
+        header.searchBar.onSearchButtonClicked = { [weak self] text in
+                    self?.filterBuildings(with: text) // 검색어를 이용해 건물을 필터링합니다.
+                }
     }
     
     private func config() {
@@ -111,13 +116,12 @@ extension SearchBuildingViewController: UICollectionViewDataSource {
             cell.imageView.kf.setImage(with: url)
         }
 
-        if let targetBuilding = arrayBuilding.first(where: { $0.id == 2 }), let imageUrl = targetBuilding.img {
-            print("Image URL for id 2: \(imageUrl)")
-        } else {
-            print("Data with id 2 not found or image URL is nil")
-        }
+//        if let targetBuilding = arrayBuilding.first(where: { $0.id == 2 }), let imageUrl = targetBuilding.img {
+//            print("Image URL for id 2: \(imageUrl)")
+//        } else {
+//            print("Data with id 2 not found or image URL is nil")
+//        }
 
-        
         if let name = arrayBuilding[indexPath.row].name {
             cell.buildingNameLabel.text = "\(name)"
         } else {
@@ -130,7 +134,8 @@ extension SearchBuildingViewController: UICollectionViewDataSource {
 
 extension SearchBuildingViewController {
     func successAPI(_ result: [BuildingModel]) {
-        arrayBuilding = result
+        allBuildings = result // 모든 건물을 저장합니다.
+        arrayBuilding = result // 현재 보여줄 건물들을 저장합니다.
         
         ImageCache.default.clearMemoryCache()
         ImageCache.default.clearDiskCache()
@@ -139,4 +144,17 @@ extension SearchBuildingViewController {
             self.collectionView.reloadData()
         }
     }
+    
+    func filterBuildings(with text: String) {
+            if text.isEmpty {
+                arrayBuilding = allBuildings // 검색어가 없을 경우 모든 건물을 보여줍니다.
+            } else {
+                arrayBuilding = allBuildings.filter { building in
+                    building.name?.contains(text) ?? false // 건물의 이름에 검색어가 포함된 경우만 선택합니다.
+                }
+            }
+            collectionView.reloadData() // 건물 목록을 새로고침합니다.
+        }
+        
+    
 }
