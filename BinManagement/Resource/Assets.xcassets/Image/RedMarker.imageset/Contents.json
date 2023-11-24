@@ -1,16 +1,18 @@
 {
   "images" : [
     {
-      "filename" : "MapMarker_Red.png",
-      "idiom" : "universal",
+      "filename" : "MapMarker_Red 3.png",
+      "idiom" : "iphone",
       "scale" : "1x"
     },
     {
-      "idiom" : "universal",
+      "filename" : "MapMarker_Red 4.png",
+      "idiom" : "iphone",
       "scale" : "2x"
     },
     {
-      "idiom" : "universal",
+      "filename" : "MapMarker_Red 5.png",
+      "idiom" : "iphone",
       "scale" : "3x"
     }
   ],

@@ -45,31 +45,42 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
        }
 
     func sceneDidDisconnect(_ scene: UIScene) {
-        // Called as the scene is being released by the system.
-        // This occurs shortly after the scene enters the background, or when its session is discarded.
-        // Release any resources associated with this scene that can be re-created the next time the scene connects.
-        // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
+        
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
-        // Called when the scene has moved from an inactive state to an active state.
-        // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+        
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
-        // Called when the scene will move from an active state to an inactive state.
-        // This may occur due to temporary interruptions (ex. an incoming phone call).
+        // local noti
+        if #available(iOS 10.0, *) {
+            UNUserNotificationCenter.current().getNotificationSettings() { settings in
+                if settings.authorizationStatus == UNAuthorizationStatus.authorized {
+                    let nContents = UNMutableNotificationContent()
+                    nContents.badge = 1
+                    nContents.title = "미래를담다"
+                    nContents.body = "현재 60주년 고층부 쓰레기통(1층)이 가득찼습니다. 가능한 빨리 비워주세요!"
+                    nContents.sound = UNNotificationSound.default
+                    nContents.userInfo = ["name":"HTF486"]
+
+                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+
+                    let request = UNNotificationRequest(identifier: "NotiTest", content: nContents, trigger: trigger)
+
+                    UNUserNotificationCenter.current().add(request)
+                }
+            }
+        }
     }
+    
 
     func sceneWillEnterForeground(_ scene: UIScene) {
-        // Called as the scene transitions from the background to the foreground.
-        // Use this method to undo the changes made on entering the background.
+        
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
-        // Called as the scene transitions from the foreground to the background.
-        // Use this method to save data, release shared resources, and store enough scene-specific state information
-        // to restore the scene back to its current state.
+        
     }
 
 

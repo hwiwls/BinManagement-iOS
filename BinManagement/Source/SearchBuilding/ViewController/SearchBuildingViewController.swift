@@ -159,7 +159,6 @@ extension SearchBuildingViewController {
 
 extension SearchBuildingViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedBuilding = arrayBuilding[indexPath.row]
         let drawingsVC = AnniversaryHallDrawingsViewController()
         
         navigationController?.pushViewController(drawingsVC, animated: true)

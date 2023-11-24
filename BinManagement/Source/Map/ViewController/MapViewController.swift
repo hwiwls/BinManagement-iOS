@@ -11,7 +11,7 @@ import CoreLocation
 import SnapKit
 import Then
 
-public let DEFAULT_POSITION = MTMapPointGeo(latitude: 37.450755, longitude: 126.657110)
+public let DEFAULT_POSITION = MTMapPointGeo(latitude: 37.450891, longitude: 126.654289)
 
 class MapViewController: UIViewController, MTMapViewDelegate {
 

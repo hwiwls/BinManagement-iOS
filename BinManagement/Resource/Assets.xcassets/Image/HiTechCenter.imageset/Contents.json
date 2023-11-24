@@ -2,15 +2,17 @@
   "images" : [
     {
       "filename" : "HiTechCenter.jpg",
-      "idiom" : "universal",
+      "idiom" : "iphone",
       "scale" : "1x"
     },
     {
-      "idiom" : "universal",
+      "filename" : "HiTechCenter 4.jpg",
+      "idiom" : "iphone",
       "scale" : "2x"
     },
     {
-      "idiom" : "universal",
+      "filename" : "HiTechCenter 5.jpg",
+      "idiom" : "iphone",
       "scale" : "3x"
     }
   ],
