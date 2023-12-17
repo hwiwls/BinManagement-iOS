@@ -11,7 +11,7 @@ import CoreLocation
 import SnapKit
 import Then
 
-public let DEFAULT_POSITION = MTMapPointGeo(latitude: 37.450755, longitude: 126.657110)
+public let DEFAULT_POSITION = MTMapPointGeo(latitude: 37.450891, longitude: 126.654289)
 
 class MapViewController: UIViewController, MTMapViewDelegate {
 
@@ -59,7 +59,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         
         let studentHall = MTMapPOIItem()
         studentHall.itemName = "학생회관"
-        studentHall.tag = 3
+        studentHall.tag = 7
         studentHall.mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.449503, longitude: 126.656687))
         studentHall.customImageName = "GreenMarker"
         studentHall.markerType = .customImage
@@ -67,7 +67,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         
         let building02 = MTMapPOIItem()
         building02.itemName = "2호관"
-        building02.tag = 4
+        building02.tag = 3
         building02.mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.451121, longitude: 126.655369))
         building02.customImageName = "GreenMarker"
         building02.markerType = .customImage
@@ -75,7 +75,7 @@ class MapViewController: UIViewController, MTMapViewDelegate {
         
         let building05 = MTMapPOIItem()
         building05.itemName = "5호관_동"
-        building05.tag = 5
+        building05.tag = 4
         building05.mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.451049, longitude: 126.653796))
         building05.customImageName = "GreenMarker"
         building05.markerType = .customImage

@@ -1,16 +1,18 @@
 {
   "images" : [
     {
-      "filename" : "hitechDrawings.png",
-      "idiom" : "universal",
+      "filename" : "hitechDrawings 3.png",
+      "idiom" : "iphone",
       "scale" : "1x"
     },
     {
-      "idiom" : "universal",
+      "filename" : "hitechDrawings 4.png",
+      "idiom" : "iphone",
       "scale" : "2x"
     },
     {
-      "idiom" : "universal",
+      "filename" : "hitechDrawings 5.png",
+      "idiom" : "iphone",
       "scale" : "3x"
     }
   ],

@@ -9,7 +9,7 @@ import Alamofire
 
 class UserDataManager {
     func userDataManager(_ viewController: SignInViewController) {
-        AF.request("https://b958-218-148-90-111.ngrok-free.app/user", method: .get)
+        AF.request("https://a1d7-218-148-90-111.ngrok-free.app/user", method: .get)
             .validate()
             .responseDecodable(of: UserDataResponse.self) { response in
                 switch response.result {
