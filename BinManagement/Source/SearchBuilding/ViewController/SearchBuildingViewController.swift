@@ -116,12 +116,6 @@ extension SearchBuildingViewController: UICollectionViewDataSource {
             cell.imageView.kf.setImage(with: url)
         }
 
-//        if let targetBuilding = arrayBuilding.first(where: { $0.id == 2 }), let imageUrl = targetBuilding.img {
-//            print("Image URL for id 2: \(imageUrl)")
-//        } else {
-//            print("Data with id 2 not found or image URL is nil")
-//        }
-
         if let name = arrayBuilding[indexPath.row].name {
             cell.buildingNameLabel.text = "\(name)"
         } else {

@@ -9,7 +9,7 @@ import Alamofire
 
 class TrashcanDataManager {
 //    func getTrashcanDetails(_ tag: Int, _ viewController: BuildingDrawingsViewController) {
-//            AF.request("https://befe-218-148-90-111.ngrok-free.app/trashcan?id=\(tag)", method: .get)
+//            AF.request("https://b426-218-148-90-111.ngrok-free.app/trashcan?id=\(tag)", method: .get)
 //                .validate()
 //                .responseDecodable(of: TrashcanDataResponse.self) { response in
 //                    switch response.result {
@@ -26,7 +26,7 @@ class TrashcanDataManager {
     
     // TrashcanDataManager.swift
     func getTrashcanDetails(_ tag: Int, _ viewController: UIViewController) {
-        AF.request("https://b958-218-148-90-111.ngrok-free.app/trashcan?id=\(tag)", method: .get)
+        AF.request("https://a1d7-218-148-90-111.ngrok-free.app/trashcanidㄱㄷ=\(tag)", method: .get)
             .validate()
             .responseDecodable(of: TrashcanDataResponse.self) { response in
                 switch response.result {
@@ -44,6 +44,4 @@ class TrashcanDataManager {
                 }
         }
     }
-
-
 }

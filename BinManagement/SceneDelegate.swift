@@ -53,27 +53,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
-        // local noti
-        if #available(iOS 10.0, *) {
-            UNUserNotificationCenter.current().getNotificationSettings() { settings in
-                if settings.authorizationStatus == UNAuthorizationStatus.authorized {
-                    let nContents = UNMutableNotificationContent()
-                    nContents.badge = 1
-                    nContents.title = "미래를담다"
-                    nContents.body = "현재 60주년 고층부 쓰레기통(1층)이 가득찼습니다. 가능한 빨리 비워주세요!"
-                    nContents.sound = UNNotificationSound.default
-                    nContents.userInfo = ["name":"HTF486"]
 
-                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
-
-                    let request = UNNotificationRequest(identifier: "NotiTest", content: nContents, trigger: trigger)
-
-                    UNUserNotificationCenter.current().add(request)
-                }
-            }
-        }
     }
-    
 
     func sceneWillEnterForeground(_ scene: UIScene) {
         

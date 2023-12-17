@@ -9,7 +9,7 @@ import Alamofire
 
 class StateDataManager {
     func getStateDetails(_ parameters: StateAPIInput, _ viewController: BinStatusViewController) {
-            AF.request("https://b958-218-148-90-111.ngrok-free.app//state?trashcan_id=\(parameters.trashcan_id!)", method: .get, parameters: parameters)
+            AF.request("https://a1d7-218-148-90-111.ngrok-free.app/stateid=\(parameters.trashcan_id!)", method: .get, parameters: parameters)
                 .validate()
                 .responseDecodable(of: StateDataResponse.self) { response in
                     switch response.result {
