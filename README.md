@@ -1,5 +1,5 @@
+<img width="1024" alt="HTF" src="https://github.com/hwiwls/BinManagement-iOS/blob/main/ReadmeAssets/HTF.png?raw=true">
 
-<img width="1024" alt="스크린샷 2024-08-05 오후 11 52 22" src="https://github.com/user-attachments/assets/e3f1b629-4b34-4a50-ac4e-6cde67b62d94">
 
 <br/><br/>
 
@@ -69,11 +69,11 @@
 
 | 건물별 쓰레기통 조회          | 건물 내 쓰레기통 조회         | 쓰레기통 상태 및 시간별 추이 조회     |
 |----------------|----------------|----------------|
-| <img src="https://github.com/user-attachments/assets/2b518a9f-1fdc-4d46-994a-33845ca0c4e2" width="300"/> | <img src="https://github.com/user-attachments/assets/f79c9d73-4e62-4018-adea-e1e0dcd7e7b2" width="300"/> | <img src="https://github.com/user-attachments/assets/4c32c9a4-15bd-4783-a816-85f578a9b9e6" width="300"/> |
+| <img width="232" alt="Map" src="https://github.com/hwiwls/BinManagement-iOS/blob/main/ReadmeAssets/map.png?raw=true"> | <img width="232" alt="In Building" src="https://github.com/hwiwls/BinManagement-iOS/blob/main/ReadmeAssets/inbuilding.PNG?raw=true"> | <img width="232" alt="Graph" src="https://github.com/hwiwls/BinManagement-iOS/blob/main/ReadmeAssets/graph.PNG?raw=true"> |
 
 | 건물 검색          | 마이페이지         |
 |----------------|----------------|
-| <img src="https://github.com/user-attachments/assets/389883ed-ab95-4156-b1c8-c11fbd6fe846" width="300"/> | <img src="https://github.com/user-attachments/assets/7e148af2-0efd-4208-ba85-55a8cbbb1570" width="300"/> |
+| <img width="232" alt="Search" src="https://github.com/hwiwls/BinManagement-iOS/blob/main/ReadmeAssets/search.PNG?raw=true"> | <img width="232" alt="My Page" src="https://github.com/hwiwls/BinManagement-iOS/blob/main/ReadmeAssets/mypage.PNG?raw=true"> |
 
 <br/><br/>
 
